@@ -3,9 +3,42 @@ layout: page
 title: 控制器接应急电源
 parent: 紧急开锁/emergency
 ---
-<h2>{{page.title}}</h2>
-<ul>
-    <li><a href="\assets\emergency\external-power\schematic.pdf">连接示意图</a></li>
-    <li><a href="\assets\emergency\external-power\power-supply.jpg">连接实物图</a></li>
-    <li><a href="\assets\emergency\external-power\list.xlsx">应急电源规格</a></li>
-</ul>
+<html>
+    <head>
+        <style>
+            .responsive {width: 80%; height: auto;}
+        </style>
+    </head>
+    <body>
+        <h3>{{page.title}}</h3>
+        <div class="responsive"><img src="\assets\emergency\external-power\power-supply.jpg" alt=""></div>
+        <table>
+            <tr>
+                <th>名称</th>
+                <th>编号</th>
+                <th>数量</th>
+            </tr>
+            <tr>
+                <td>应急电源连接线</td>
+                <td>237.59.082</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p>客户需自行采购应急电源，应急电源规格如下：</p>
+        <table style="table-layout: auto; width: fit-content;">
+            <tr>
+                <th style="width: 20%;">输出</th>
+                <td>12V DC</td>
+            </tr>
+            <tr>
+                <th>容量</th>
+                <td>最小20100 mAh</td>
+            </tr>
+            <tr>
+                <th>接口</th>
+                <td>5.5 x 2.1 mm</td>
+            </tr>
+        </table>
+        <p>请点击<a href="\assets\emergency\external-power\schematic.pdf">此处</a>查看安装示意图</p>
+    </body>
+</html>
