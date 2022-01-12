@@ -54,4 +54,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-logo: '/assets/images/hafele-logo.jpg'
+logo: '/images/hafele-logo.jpg'
