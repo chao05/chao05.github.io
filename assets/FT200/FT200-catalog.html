@@ -3,8 +3,58 @@ layout: page
 title: 单页/Catalog
 parent: FT200
 ---
-<h2>{{page.title}}</h2>
-<ul>
-    <li><a href="/assets/FT200/catalog/pages_ch.pdf">中文单页</a></li>
-    <li><a href="/assets/FT200/catalog/pages_en.pdf">英文单页</a></li>
-</ul>
+<head>
+    <style>
+        table {margin-top: 5%;}
+    </style>
+    <link rel="stylesheet" href="\css\lightbox.min.css">
+</head>
+<body>
+    <h2>{{page.title}}</h2>
+    <table>
+        <caption>基础物料清单</caption>
+        <tr>
+            <th>名称</th>
+            <th>编号</th>
+            <th>数量</th>
+        </tr>
+        <tr>
+            <td><a href="/FT200">控制器/FT200</a></td>
+            <td>237.59.010</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="/EFL3">锁头/EFL3</a></td>
+            <td>237.59.000</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hafele.com.de/en/product/connection-cable-cc-200-dialock/23759022/?MasterSKU=0000015f0002019a00010023">
+                连线/CC200</a>
+            </td>
+            <td>237.59.022 (3m)</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hafele.com.de/en/product/antenna-fan-200-dialock/23759061/?MasterSKU=0000015f000202f600010023">
+                读头/FAN200</a>
+            </td>
+            <td>237.59.061 (3m)</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="/power-supply">电源</a></td>
+            <td>833.02.999</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="\assets\FT200\key.jpg" data-lightbox="key">卡片</a></td>
+            <td>根据标准(Mifare 或 Tag-it)和款式确定编号</td>
+        </tr>
+    </table>
+    <ul>
+        <li><a href="/assets/FT200/catalog/pages_ch.pdf">中文单页</a></li>
+        <li><a href="/assets/FT200/catalog/pages_en.pdf">英文单页</a></li>
+    </ul>
+    <script src="\js\lightbox-plus-jquery.js"></script>
+</body>
