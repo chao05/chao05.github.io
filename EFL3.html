@@ -2,14 +2,28 @@
 layout: page
 title: EFL3/3c
 permalink: /EFL3
-has_children: true
+has_children: false
 ---
 <html>
     <head>
         <style>
-            .responsive {float: right; width: 35%; height: auto;}
+            .responsive {width: 35%; height: auto;}
             .title {color: #991601;}
             table {text-align: left; table-layout: auto; width: fit-content;}
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 5px;
+                margin: 5%;
+            }
+            .row::after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+            @media screen and (max-width: 500px) {
+                .column {width: 100%;}
+            }
         </style>
     </head>
     <body>
@@ -35,6 +49,13 @@ has_children: true
                 <td>237.59.028</td>
             </tr>
         </table>
-        <div class="responsive"><img src="\assets\EFL3\EFL3.jpg" alt=""></div>
+        <ul>
+            <li><a href="\assets\EFL3\efl3-en.pdf">英文单页</a></li>
+            <li><a href="\assets\EFL3\efl3-cn.pdf">中文单页</a></li>
+        </ul>
+        <div class="row">
+            <div class="column"><img src="\assets\EFL3\EFL3.jpg" alt=""></div>
+            <div class="column"><img src="\assets\EFL3\locking-piece.jpg" alt="" style="width: 50%;"></div>
+        </div>
     </body>
 </html>
