@@ -8,7 +8,7 @@ const Questions = [
         q: "请选择一个把手样式",
         a: ['G', 'U', 'J']
     }
-]
+];
 
 const quantity_questions = Questions.length;
 
@@ -41,12 +41,10 @@ var op2 = document.getElementById('op2');
 var op3 = document.getElementById('op3');
 var op4 = document.getElementById('op4');
 
-
 var op_ensemble = [op1, op2, op3, op4];
+const op_id = ['op1', 'op2', 'op3', 'op4'];
 
 var start = true;
-
-
 
 if (start) {
     show_question(0)
@@ -55,49 +53,51 @@ if (start) {
 const try_again = document.getElementById('try_again');
 try_again.addEventListener('click', () => {
     
-    document.getElementById('question').style.display = 'block';
-    document.getElementById('op1').style.display = 'block';
-    document.getElementById('op2').style.display = 'block';
-    document.getElementById('op3').style.display = 'block';
-    document.getElementById('op4').style.display = 'block';
-    document.getElementById('selected').style.display = 'none';
-    document.getElementById('result').style.display = 'none';
+    document.getElementById('selected_color').innerHTML = '';
+    document.getElementById('selected_shape').innerHTML = '';
+    document.getElementById('result').innerHTML = '';
+    
+    for (let index = 0; index < op_ensemble.length; index++) {
+        document.getElementById(op_id[index]).style.display = 'inline'
+    };
+
     show_question(0)
 })
 
-function go_to_next_question(current_question_id) {
+function go_to_question(current_question_id) {
+
     if (current_question_id == 1) {
         question.innerHTML = Questions[current_question_id].q;
-        op1.innerHTML = Questions[current_question_id].a[0];
-        op2.innerHTML = Questions[current_question_id].a[1];
-        op3.innerHTML = Questions[current_question_id].a[2];
+
+        for (let index = 0; index < op_id.length-1; index++) {
+            op_ensemble[index].innerHTML = Questions[current_question_id].a[index]
+        };
+
         document.getElementById('op4').style.display = 'none';
         document.getElementById('try_again').style.display = 'block'
     
     } else if (current_question_id == 0){
-        document.getElementById('op4').style.display = 'block';
+        
         question.innerHTML = Questions[current_question_id].q;
         
-        op1.innerHTML = Questions[current_question_id].a[0];
-        op2.innerHTML = Questions[current_question_id].a[1];
-        op3.innerHTML = Questions[current_question_id].a[2];
-        op4.innerHTML = Questions[current_question_id].a[3];
+        for (let index = 0; index < op_id.length; index++) {
+            op_ensemble[index].innerHTML = Questions[current_question_id].a[index]  
+        };
+
         document.getElementById('try_again').style.display = 'none'
     }
-    
-    
 };
 
 function go_to_result() {
-    document.getElementById('question').style.display = 'none';
-    document.getElementById('op1').style.display = 'none';
-    document.getElementById('op2').style.display = 'none';
-    document.getElementById('op3').style.display = 'none';
-    document.getElementById('selected').style.display = 'block';
-    document.getElementById('result').style.display = 'block';
-    document.getElementById('try_again').style.display = 'block';
+
+    document.getElementById('question').innerHTML = '';
+    for (let index = 0; index < op_id.length-1; index++) {
+        document.getElementById(op_id[index]).style.display = 'none';
+    }
+    
     selected_color.innerHTML = '您选择的颜色为：' + current_color;
     selected_shape.innerHTML = '您选择的把手形状为：' + current_shape;
+
     for (let index = 0; index < number_ensemble.length; index++) {
         if (current_color == number_ensemble[index].color &
             current_shape == number_ensemble[index].shape) {
@@ -108,6 +108,7 @@ function go_to_result() {
 };
 
 function store_current_value(button_id) {
+    
     if (question.innerHTML == Questions[0].q) {
         current_color = op_ensemble[button_id-1].innerHTML
     } else if (question.innerHTML == Questions[1].q)
@@ -117,14 +118,14 @@ function store_current_value(button_id) {
 };
 
 function show_question(current_question_id) {
-    go_to_next_question(current_question_id);
+    go_to_question(current_question_id);
+
     op1.addEventListener('click', () => {
-        store_current_value(1)
+        store_current_value(1);
         
         if (question.innerHTML != Questions[quantity_questions-1].q) {
             current_question_id += 1
-            go_to_next_question(current_question_id);
-            
+            go_to_question(current_question_id);
         } else {
             go_to_result()
         }
@@ -135,7 +136,7 @@ function show_question(current_question_id) {
         
         if (question.innerHTML != Questions[quantity_questions-1].q) {
             current_question_id += 1
-            go_to_next_question(current_question_id);
+            go_to_question(current_question_id);
             
         } else {
             go_to_result()
@@ -147,7 +148,7 @@ function show_question(current_question_id) {
         
         if (question.innerHTML != Questions[quantity_questions-1].q) {
             current_question_id += 1
-            go_to_next_question(current_question_id);
+            go_to_question(current_question_id);
             
         } else {
             go_to_result()
@@ -159,7 +160,7 @@ function show_question(current_question_id) {
         
         if (question.innerHTML != Questions[quantity_questions-1].q) {
             current_question_id += 1
-            go_to_next_question(current_question_id);
+            go_to_question(current_question_id);
             
         } else {
             go_to_result()
