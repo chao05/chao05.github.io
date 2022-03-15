@@ -34,6 +34,11 @@ parent: DT700
             width: 50%;
             padding: 3%;
         }
+        .column_4 {
+            float: left;
+            width: 25%;
+            padding: 1%;
+        }
         .row::after {
             content: '';
             clear: both;
@@ -98,5 +103,25 @@ parent: DT700
             <button>重新选择</button>
         </div>
 	</div>
+    <h3>判断开门方向</h3>
+    <p>下图展示了如何判断开门方向，图中数字‘1’侧为室内侧，数字‘2’侧为室外侧</p>
+    <div class="row">
+        <figure class="column_4">
+            <img src="\assets\DT700\left_outwards.jpg" alt="">
+            <figcaption>左外开</figcaption>
+        </figure>
+        <figure class="column_4">
+            <img src="\assets\DT700\right_inwards.jpg" alt="">
+            <figcaption>右内开</figcaption>
+        </figure>
+        <figure class="column_4">
+            <img src="\assets\DT700\left_inwards.jpg" alt="">
+            <figcaption>左内开</figcaption>
+        </figure>
+        <figure class="column_4">
+            <img src="\assets\DT700\right_outwards.jpg" alt="">
+            <figcaption>右外开</figcaption>
+        </figure>
+    </div>
     <script src="\js\dt700_module_selection.js"></script>
 </body>
