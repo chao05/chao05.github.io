@@ -21,15 +21,44 @@ parent: DT700
         #selected, #result, #try_again {
             margin: 3%;
         }
-        img {
-            margin: 3%;
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 3%;
+        }
+        .row::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+        figcaption {
+            font-weight: bold;
+            text-align: center;
+            color: brown;
         }
     </style>
 </head>
 <body>
     <h2>{{ page.title }}</h2>
     <h3>我们提供如下所示的把手形状：</h3>
-    <img src="\assets\DT700\handle_shape.jpg" alt="">
+
+    <div class="row">
+        <figure class="column">
+            <img src="\assets\DT700\handle_G.jpg" alt="">
+            <figcaption>G型</figcaption>
+        </figure>
+
+        <figure class="column">
+            <img src="\assets\DT700\handle_U.jpg" alt="">
+            <figcaption>U型</figcaption>
+        </figure>
+        
+        <figure class="column">
+            <img src="\assets\DT700\handle_J.jpg" alt="">
+            <figcaption>J型</figcaption>
+        </figure>
+    </div>
+
     <p>我们提供不锈钢原色，黑色，抛光黄铜色，抛光原色四种颜色，请使用以下选型问答确定您需订购的编号</p>
     <div class="panel">
         <div class="question-container" id="question">
