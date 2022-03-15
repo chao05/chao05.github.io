@@ -4,6 +4,23 @@ title: 内外模块/modules
 parent: DT700
 ---
 <head>
+    <style>
+        .panel {
+            overflow: auto;
+            width:auto;
+            background-color:wheat;
+            text-align: center;
+        }
+        .question-container {
+            font-size:larger;
+        }
+        .option {
+            margin:3%;
+        }
+        #selected, #result, #try_again {
+            margin: 3%;
+        }
+    </style>
 </head>
 <body>
     <h2>{{ page.title }}</h2>
@@ -22,7 +39,9 @@ parent: DT700
             <p id="selected_shape"></p>
         </div>
         <div id="result"></div>
-        <button id="try_again">重新选择</button>
+        <div id="try_again">
+            <button>重新选择</button>
+        </div>
 	</div>
     <script src="\js\dt700_module_selection.js"></script>
 </body>
