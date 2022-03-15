@@ -5,6 +5,9 @@ parent: DT700
 ---
 <head>
     <style>
+        h3 {
+            color: darkred;
+        }
         .panel {
             overflow: auto;
             width:auto;
@@ -21,9 +24,14 @@ parent: DT700
         #selected, #result, #try_again {
             margin: 3%;
         }
-        .column {
+        .column_3 {
             float: left;
             width: 33.33%;
+            padding: 3%;
+        }
+        .column_2 {
+            float: left;
+            width: 50%;
             padding: 3%;
         }
         .row::after {
@@ -34,26 +42,38 @@ parent: DT700
         figcaption {
             font-weight: bold;
             text-align: center;
-            color: brown;
+            color: darkred;
         }
     </style>
 </head>
 <body>
     <h2>{{ page.title }}</h2>
+    <h3>内外模块的外形尺寸如下图所示：</h3>
+    <div class="row">
+        <figure class="column_2">
+            <img src="\assets\DT700\inside_dimension.jpg" alt="">
+            <figcaption>内模块</figcaption>
+        </figure>
+
+        <figure class="column_2">
+            <img src="\assets\DT700\outside_dimension.jpg" alt="">
+            <figcaption>外模块</figcaption>
+        </figure>
+    </div>
     <h3>我们提供如下所示的把手形状：</h3>
 
     <div class="row">
-        <figure class="column">
+        <figure class="column_3">
             <img src="\assets\DT700\handle_G.jpg" alt="">
             <figcaption>G型</figcaption>
         </figure>
 
-        <figure class="column">
+        <figure class="column_3">
             <img src="\assets\DT700\handle_U.jpg" alt="">
             <figcaption>U型</figcaption>
         </figure>
         
-        <figure class="column">
+        <figure class="column_3">
             <img src="\assets\DT700\handle_J.jpg" alt="">
             <figcaption>J型</figcaption>
         </figure>

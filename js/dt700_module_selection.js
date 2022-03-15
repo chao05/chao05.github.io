@@ -2,7 +2,7 @@
 const Questions = [
     {
         q: "请选择一个颜色",
-        a: ['satin', 'black', 'polished_brass', 'polished']
+        a: ['不锈钢原色', '黑色', '抛光黄铜色', '抛光原色']
     },
     {
         q: "请选择一个把手样式",
@@ -13,18 +13,18 @@ const Questions = [
 const quantity_questions = Questions.length;
 
 const number_ensemble = [
-    {number: '917.64.006', color: 'satin', shape: 'G', id: 0},
-    {number: '917.64.051', color: 'satin', shape: 'U', id: 1},
-    {number: '917.64.008', color: 'satin', shape: 'J', id: 2},
-    {number: '917.64.200', color: 'black', shape: 'G', id: 3},
-    {number: '917.64.202', color: 'black', shape: 'U', id: 4},
-    {number: '917.64.204', color: 'black', shape: 'J', id: 5},
-    {number: '917.64.257', color: 'polished_brass', shape: 'G', id: 6},
-    {number: '917.64.258', color: 'polished_brass', shape: 'U', id: 7},
-    {number: '917.64.259', color: 'polished_brass', shape: 'J', id: 8},
-    {number: '917.64.201', color: 'polished', shape: 'G', id: 9},
-    {number: '917.64.203', color: 'polished', shape: 'U', id: 10},
-    {number: '917.64.205', color: 'polished', shape: 'J', id: 11}
+    {number: '917.64.006', color: '不锈钢原色', shape: 'G', id: 0},
+    {number: '917.64.051', color: '不锈钢原色', shape: 'U', id: 1},
+    {number: '917.64.008', color: '不锈钢原色', shape: 'J', id: 2},
+    {number: '917.64.200', color: '黑色', shape: 'G', id: 3},
+    {number: '917.64.202', color: '黑色', shape: 'U', id: 4},
+    {number: '917.64.204', color: '黑色', shape: 'J', id: 5},
+    {number: '917.64.257', color: '抛光黄铜色', shape: 'G', id: 6},
+    {number: '917.64.258', color: '抛光黄铜色', shape: 'U', id: 7},
+    {number: '917.64.259', color: '抛光黄铜色', shape: 'J', id: 8},
+    {number: '917.64.201', color: '抛光原色', shape: 'G', id: 9},
+    {number: '917.64.203', color: '抛光原色', shape: 'U', id: 10},
+    {number: '917.64.205', color: '抛光原色', shape: 'J', id: 11}
 ]
 
 var current_color = '';
