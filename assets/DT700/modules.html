@@ -8,8 +8,9 @@ parent: DT700
         .panel {
             overflow: auto;
             width:auto;
-            background-color:wheat;
+            background-color:beige;
             text-align: center;
+            margin-top: 3%;
         }
         .question-container {
             font-size:larger;
@@ -20,10 +21,16 @@ parent: DT700
         #selected, #result, #try_again {
             margin: 3%;
         }
+        img {
+            margin: 3%;
+        }
     </style>
 </head>
 <body>
     <h2>{{ page.title }}</h2>
+    <h3>我们提供如下所示的把手形状：</h3>
+    <img src="\assets\DT700\handle_shape.jpg" alt="">
+    <p>我们提供不锈钢原色，黑色，抛光黄铜色，抛光原色四种颜色，请使用以下选型问答确定您需订购的编号</p>
     <div class="panel">
         <div class="question-container" id="question">
             questions go here.
