@@ -5,6 +5,9 @@ parent: DT700
 ---
 <head>
     <style>
+        h3 {
+            color: brown;
+        }
         .panel {
             text-align: center;
             background-color: beige;
@@ -22,11 +25,62 @@ parent: DT700
         .navigation_container {
             margin-top: 3%;
         }
+        .row::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .column_3 {
+            float: left;
+            width: 33.33%;
+            padding: 3%;
+        }
+        .column_2 {
+            float: left;
+            width: 50%;
+            padding: 3%;
+        }
+        .column_4 {
+            float: left;
+            width: 25%;
+            padding: 1%;
+        }
+        figcaption {
+            text-align: center;
+        }
+        .combo_pic {
+            margin-top: 3%;
+            margin-bottom: 1%;
+        }
     </style>
 </head>
 <body>
     <h2>{{ page.title }}</h2>
+    <h3>锁体的重点尺寸如下图所示：</h3>
+    <img src="\assets\DT700\lock_pic_dim_combo.jpg" alt="" class="combo_pic">
+    <h3>判断开门方向</h3>
+    <p>下图展示了如何判断开门方向，图中数字‘1’侧为室内侧，数字‘2’侧为室外侧</p>
+    <div class="row">
+        <figure class="column_4">
+            <img src="\assets\DT700\left_outwards.jpg" alt="">
+            <figcaption>左外开</figcaption>
+        </figure>
+        <figure class="column_4">
+            <img src="\assets\DT700\right_inwards.jpg" alt="">
+            <figcaption>右内开</figcaption>
+        </figure>
+        <figure class="column_4">
+            <img src="\assets\DT700\left_inwards.jpg" alt="">
+            <figcaption>左内开</figcaption>
+        </figure>
+        <figure class="column_4">
+            <img src="\assets\DT700\right_outwards.jpg" alt="">
+            <figcaption>右外开</figcaption>
+        </figure>
+    </div>
 
+    <h3>选择锁体编号</h3>
+    <p>锁边距 'A'，锁片外形，锁片宽度，开门方向和锁片颜色共同确定锁体编号。请使用以下选型问答确定您需订购的编号。</p>
     <div class="panel">
         <div class="question_container" id="question">
             questions go here.

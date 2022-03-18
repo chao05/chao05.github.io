@@ -267,12 +267,12 @@ function go_to_result() {
 
     document.getElementsByClassName('result')[0].style.display = 'block';
 
-    selected_backset_e.innerHTML = '您选择的锁边距是：'+selected_backset;
+    selected_backset_e.innerHTML = '您选择的锁边距为：'+selected_backset;
     selected_forend_shape_e.innerHTML = '您选择的锁片边缘为：'+selected_forend_shape;
-    selected_forend_width_e.innerHTML = '您选择的锁片宽度是：'+selected_forend_width;
+    selected_forend_width_e.innerHTML = '您选择的锁片宽度为：'+selected_forend_width;
     selected_l_r_e.innerHTML = '您选择'+selected_l_r;
     selected_in_out_e.innerHTML = '您选择'+selected_in_out;
-    selected_color_e.innerHTML = '您选择的颜色是：'+selected_color;
+    selected_color_e.innerHTML = '您选择的颜色为：'+selected_color;
 
     for (let index = 0; index < number_ensemble.length; index++) {
 
