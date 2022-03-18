@@ -1,0 +1,62 @@
+---
+layout: page
+title: 锁体/lock
+parent: DT700
+---
+<head>
+    <style>
+        .panel {
+            text-align: center;
+            background-color: beige;
+        }
+        .question_container {
+            font-size: large; 
+            margin-bottom: 3%;
+        }
+        .selected_container {
+            padding-top: 1%;
+        }
+        .result {
+            color: brown;
+        }
+        .navigation_container {
+            margin-top: 3%;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ page.title }}</h2>
+
+    <div class="panel">
+        <div class="question_container" id="question">
+            questions go here.
+        </div>
+        <div class="option_container" id="option">
+            <button class="option" id="op0" onclick=""></button>
+            <button class="option" id="op1" onclick=""></button>
+            <button class="option" id="op2" onclick=""></button>
+            <button class="option" id="op3" onclick=""></button>
+        </div>
+        <div class="selected_container" id="selected">
+            <div id="first_3_selected">
+                <p class="selected_info" id="selected_backset"></p>
+                <p class="selected_info" id="selected_forend_shape"></p>
+                <p class="selected_info" id="selected_forend_width"></p>
+            </div>
+
+            <div id="last_3_selcted">
+                <p class="selected_info" id="selected_l_r"></p>
+                <p class="selected_info" id="selected_in_out"></p>
+                <p class="selected_info" id="selected_color"></p>
+            </div>
+
+        </div>
+        <div class="result"></div>
+        <div class="navigation_container" id="navigation">
+            <button class="navigation" id="last_one">上一题</button>
+            <button class="navigation" id="try_again">重新选择</button>
+        </div>
+    </div>
+    
+    <script src="\js\dt700_lock_selection.js"></script>
+</body>
