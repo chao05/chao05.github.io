@@ -9,6 +9,12 @@ has_children: true
         .responsive {float: right; width: 50%; height: auto;}
         .title {color: #991601;}
         th {text-align: left;}
+        ul::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+        
     </style>
 </head>
 <body>
@@ -36,7 +42,9 @@ has_children: true
             <td>1套</td>
         </tr>
         <tr>
-            <td>锁体</td>
+            <td>
+                <a href="\assets\DT700\lock.html">锁体</a>
+            </td>
             <td>917.81.791</td>
             <td>1</td>
         </tr>
@@ -46,12 +54,16 @@ has_children: true
             <td>1</td>
         </tr>
         <tr>
-            <td>方杆包</td>
+            <td>
+                <a href="\assets\DT700\fittings.html">方杆包</a>
+            </td>
             <td>917.80.831</td>
             <td>1</td>
         </tr>
         <tr>
-            <td>螺丝包</td>
+            <td>
+                <a href="\assets\DT700\fittings.html">螺丝包</a>
+            </td>
             <td>917.80.851</td>
             <td>1</td>
         </tr>
@@ -65,5 +77,16 @@ has_children: true
             <td>管理软件（根据需求选购）</td>
         </tr>
     </table>
+    <div>
+        <ul>
+            <li>
+                <a href="\assets\DT700\instructions(en).pdf">DT700/710操作指导(英文)</a>
+            </li>
+            <li>
+                <a href="\assets\DT700\instructions(cn).pdf">DT700/710操作指导(中文)</a>
+            </li>
+        </ul>
+    </div>
+    
     <div class="responsive"><img src="\assets\DT700\DT700.jpg" alt=""></div>
 </body>

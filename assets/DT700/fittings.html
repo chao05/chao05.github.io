@@ -1,0 +1,113 @@
+---
+layout: page
+title: 配件/fittings
+parent: DT700
+---
+<head>
+    <style>
+        h3 {
+            color: brown;
+        }
+        .panel {
+            background-color: beige;
+            text-align: center;
+        }
+        .row::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .column_2 {
+            float: left;
+            width: 50%;
+            padding: 3%;
+        }
+        figcaption {
+            text-align: center;
+            color: darkred;
+        }
+        .option_container {
+            margin-top: 2%;
+        }
+        .navigation_container {
+            margin-top: 2%;
+        }
+        .result {
+            color: brown;
+            margin-top: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ page.title }}</h2>
+    <div class="row">
+        <figure class="column_2">
+            <img src="\assets\DT700\screw_set.jpg" alt="">
+            <figcaption>螺丝包参考尺寸</figcaption>
+        </figure>
+
+        <figure class="column_2">
+            <img src="\assets\DT700\spindle_set.jpg" alt="">
+            <figcaption>方杆包参考尺寸</figcaption>
+        </figure>
+    </div>
+    <h3>确定螺丝包编号</h3>
+    <p>螺丝包视图中 'E'为门的厚度，请使用如下问答确定产品编号。</p>
+    <div class="panel">
+        <div class="question_container" id="question_screw">
+            questions go here.
+        </div>
+        <div class="option_container" id="option_screw">
+            <button class="option" id="op0_screw" onclick=""></button>
+            <button class="option" id="op1_screw" onclick=""></button>
+            <button class="option" id="op2_screw" onclick=""></button>
+            <button class="option" id="op3_screw" onclick=""></button>
+        </div>
+        <div class="selected_container" id="selected_screw">
+            
+			<p class="selected_info" id="selected_door_width"></p>
+			<p class="selected_info" id="selected_color"></p>
+
+        </div>
+        <div class="result" id="screw"></div>
+        <div class="navigation_container" id="navigation_screw">
+            <button class="navigation" id="last_one_screw">上一题</button>
+            <button class="navigation" id="try_again_screw">重新选择</button>
+        </div>
+    </div>
+    <h3>确定方杆包编号</h3>
+    <p>方杆包视图中 'C'为锁体中心至门外侧边缘的距离，'D'为锁体中心至门内侧边缘的距离。请使用如下问答确定产品编号。</p>
+    <div class="panel">
+        <div class="question_container" id="question_spindle">
+            questions go here.
+        </div>
+        <div class="option_container" id="option_spindle">
+            <button class="option" id="op0_spindle" onclick=""></button>
+            <button class="option" id="op1_spindle" onclick=""></button>
+            <button class="option" id="op2_spindle" onclick=""></button>
+        </div>
+        <div class="selected_container" id="selected_spindle">
+            
+			<p class="selected_info" id="selected_C"></p>
+			<p class="selected_info" id="selected_D"></p>
+
+        </div>
+        <div class="result" id="spindle"></div>
+        <div class="navigation_container" id="navigation_spindle">
+            <button class="navigation" id="last_one_spindle">上一题</button>
+            <button class="navigation" id="try_again_spindle">重新选择</button>
+        </div>
+    </div>
+    <div>
+        <p>请点击如下链接查看 {{page.title}} 相关单页</p>
+        <ul>
+            <li>
+                <a href="\assets\DT700\components-details.pdf">DT700/710部件明细(英文)</a>
+            </li>
+            <li>
+                <a href="\assets\DT700\components-details-cn.pdf">DT700/710部件明细(中文)</a>
+            </li>
+        </ul>
+    </div>
+    <script src="\js\dt700_fittings_selection.js"></script>
+</body>
