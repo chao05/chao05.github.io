@@ -1,6 +1,6 @@
 ---
 layout: page
-title: DT700
+title: DT700/710
 permalink: /DT700
 has_children: true
 ---
@@ -14,69 +14,66 @@ has_children: true
             clear: both;
             display: table;
         }
-        
+        .table_switch {
+            margin-top: 2%;
+        }
     </style>
 </head>
 <body>
     <h2>
         <a class="title"
            href="https://www.hafele.com.de/en/product/door-terminal-set-haefele-dialock-dt-700-with-bluetooth-interface-hb-for-interior-guest-room-doors-with-thumbturn/000001290000ad2d00010023/#SearchParameter=&@QueryTerm=dt700&@P.FF.followSearch=9687&PageNumber=1&OriginalPageSize=12&PageSize=12&Position=3&OrigPos=5&ProductListSize=22&PDP=true">
-            DT700
+            {{page.title}}
         </a>
     </h2>
-    <table>
-        <caption>
-            <b>典型组件</b>
-        </caption>
-        <tr>
-            <th>名称</th>
-            <th>编号</th>
-            <th>数量</th>
-        </tr>
-        <tr>
-            <td>
-                <a href="\assets\DT700\modules.html">前后模块</a>
-                
-            </td>
-            <td>917.64.006</td>
-            <td>1套</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="\assets\DT700\lock.html">锁体</a>
-            </td>
-            <td>917.81.791</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>锁芯</td>
-            <td>916.80.221</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="\assets\DT700\fittings.html">方杆包</a>
-            </td>
-            <td>917.80.831</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="\assets\DT700\fittings.html">螺丝包</a>
-            </td>
-            <td>917.80.851</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>电池（1.5V AA）</td>
-        </tr>
-        <tr>
-            <td>卡片</td>
-        </tr>
-        <tr>
-            <td>管理软件（根据需求选购）</td>
-        </tr>
-    </table>
+    <div class="table_switch">
+        <div class="button_container">
+            <button class="button_switch" id="switch_to_dt700">DT700配置</button>
+            <button class="button_switch" id="switch_to_dt710">DT710配置</button>
+        </div>
+        <table>
+            <tr>
+                <th>名称</th>
+                <th>编号</th>
+                <th>数量</th>
+            </tr>
+            <tr>
+                <td><a href="\assets\DT700\modules.html">前后模块</a></td>
+                <td id="module_number"></td>
+                <td>1套</td>
+            </tr>
+            <tr>
+                <td><a href="\assets\DT700\lock.html">锁体</a></td>
+                <td>917.81.791</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>锁芯</td>
+                <td>916.80.221</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><a href="\assets\DT700\fittings.html">方杆包</a></td>
+                <td>917.80.831</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><a href="\assets\DT700\fittings.html">螺丝包</a></td>
+                <td>917.80.851</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>电池（1.5V AA）</td>
+            </tr>
+            <tr>
+                <td>卡片</td>
+            </tr>
+            <tr>
+                <td>管理软件（根据需求选购）</td>
+            </tr>
+        </table>
+        
+    </div>
     <div>
         <ul>
             <li>
@@ -87,6 +84,6 @@ has_children: true
             </li>
         </ul>
     </div>
-    
     <div class="responsive"><img src="\assets\DT700\DT700.jpg" alt=""></div>
+    <script src="\js\dt700_main_page.js"></script>
 </body>
