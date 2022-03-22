@@ -10,9 +10,7 @@ const Questions = [
     }
 ];
 
-const quantity_questions = Questions.length;
-
-const number_ensemble = [
+const number_ensemble_dt700 = [
     {number: '917.64.006', color: '不锈钢原色', shape: 'G', id: 0},
     {number: '917.64.051', color: '不锈钢原色', shape: 'U', id: 1},
     {number: '917.64.008', color: '不锈钢原色', shape: 'J', id: 2},
@@ -27,143 +25,290 @@ const number_ensemble = [
     {number: '917.64.205', color: '抛光原色', shape: 'J', id: 11}
 ]
 
-var current_color = '';
-var current_shape = '';
+const number_ensemble_dt710 = new Array(
+    {number: '917.64.000', color: '不锈钢原色', shape: 'G', id: 0},
+    {number: '917.64.001', color: '不锈钢原色', shape: 'U', id: 1},
+    {number: '917.64.002', color: '不锈钢原色', shape: 'J', id: 2},
+    {number: '917.64.300', color: '黑色', shape: 'G', id: 3},
+    {number: '917.64.302', color: '黑色', shape: 'U', id: 4},
+    {number: '917.64.304', color: '黑色', shape: 'J', id: 5},
+    {number: '917.64.251', color: '抛光黄铜色', shape: 'G', id: 6},
+    {number: '917.64.252', color: '抛光黄铜色', shape: 'U', id: 7},
+    {number: '917.64.253', color: '抛光黄铜色', shape: 'J', id: 8},
+    {number: '917.64.301', color: '抛光原色', shape: 'G', id: 9},
+    {number: '917.64.303', color: '抛光原色', shape: 'U', id: 10},
+    {number: '917.64.305', color: '抛光原色', shape: 'J', id: 11}
+);
 
-var result = document.getElementById('result');
-var selected_color = document.getElementById('selected_color');
-var selected_shape = document.getElementById('selected_shape');
+var current_color_dt700 = '';
+var current_shape_dt700 = '';
 
-var question = document.getElementById('question');
+var current_color_dt710 = new String();
+var current_shape_dt710 = new String();
 
-var op1 = document.getElementById('op1');
-var op2 = document.getElementById('op2');
-var op3 = document.getElementById('op3');
-var op4 = document.getElementById('op4');
+var result_dt700 = document.getElementById('result_dt700');
+var selected_color_dt700 = document.getElementById('selected_color_dt700');
+var selected_shape_dt700 = document.getElementById('selected_shape_dt700');
 
-var op_ensemble = [op1, op2, op3, op4];
-const op_id = ['op1', 'op2', 'op3', 'op4'];
+var result_dt710 = document.getElementById('result_dt710');
+var selected_color_dt710 = document.getElementById('selected_color_dt710');
+var selected_shape_dt710 = document.getElementById('selected_shape_dt710');
 
-var start = true;
+var question_dt700 = document.getElementById('question_dt700');
+var op0_dt700 = document.getElementById('op0_dt700');
+var op1_dt700 = document.getElementById('op1_dt700');
+var op2_dt700 = document.getElementById('op2_dt700');
+var op3_dt700 = document.getElementById('op3_dt700');
 
-if (start) {
-    show_question(0)
-};
+var question_dt710 = document.getElementById('question_dt710');
+var op0_dt710 = document.getElementById('op0_dt710');
+var op1_dt710 = document.getElementById('op1_dt710');
+var op2_dt710 = document.getElementById('op2_dt710');
+var op3_dt710 = document.getElementById('op3_dt710');
 
-const try_again = document.getElementById('try_again');
-try_again.addEventListener('click', () => {
-    
-    document.getElementById('selected_color').innerHTML = '';
-    document.getElementById('selected_shape').innerHTML = '';
-    document.getElementById('result').innerHTML = '';
-    
-    for (let index = 0; index < op_ensemble.length; index++) {
-        document.getElementById(op_id[index]).style.display = 'inline'
-    };
+var op_ensemble_dt700 = [op0_dt700, op1_dt700, op2_dt700, op3_dt700];
+var op_ensemble_dt710 = [op0_dt710, op1_dt710, op2_dt710, op3_dt710];
 
-    show_question(0)
+var current_question_id_dt700 = new Number();
+var button_id_dt700 = new Number();
+
+var current_question_id_dt710 = new Number();
+var button_id_dt710 = new Number();
+
+var start = new Boolean(true);
+
+const try_again_dt700 = document.getElementById('try_again_dt700');
+try_again_dt700.addEventListener('click', () => {
+    current_question_id_dt700 = 0;
+    disapper_final_page_dt700();
+    go_to_question_dt700(current_question_id_dt700)
+
 })
 
-function go_to_question(current_question_id) {
+const try_again_dt710 = document.getElementById('try_again_dt710');
+try_again_dt710.addEventListener('click', () => {
+    current_question_id_dt710 = 0;
+    disapper_final_page_dt710();
+    go_to_question_dt710(current_question_id_dt710)
 
-    if (current_question_id == 1) {
-        question.innerHTML = Questions[current_question_id].q;
+})
 
-        for (let index = 0; index < op_id.length-1; index++) {
-            op_ensemble[index].innerHTML = Questions[current_question_id].a[index]
-        };
+const last_one_dt700 = document.getElementById('last_one_dt700');
+last_one_dt700.addEventListener('click', () => {
+    current_question_id_dt700 -= 1;
+    go_to_question_dt700(current_question_id_dt700)
+})
 
-        document.getElementById('op4').style.display = 'none';
-        document.getElementById('try_again').style.display = 'block'
-    
-    } else if (current_question_id == 0){
-        
-        question.innerHTML = Questions[current_question_id].q;
-        
-        for (let index = 0; index < op_id.length; index++) {
-            op_ensemble[index].innerHTML = Questions[current_question_id].a[index]  
-        };
+const last_one_dt710 = document.getElementById('last_one_dt710');
+last_one_dt710.addEventListener('click', () => {
+    current_question_id_dt710 -= 1;
+    go_to_question_dt710(current_question_id_dt710)
+})
 
-        document.getElementById('try_again').style.display = 'none'
+function disapper_final_page_dt700() {
+    document.getElementById('selected_dt700').style.display = 'none';
+    result_dt700.innerHTML = '';
+}
+
+function disapper_final_page_dt710() {
+    document.getElementById('selected_dt710').style.display = 'none';
+    result_dt710.innerHTML = '';
+}
+
+function disapper_question_page_dt700() {
+    question_dt700.innerHTML = '';
+    document.getElementById('option_dt700').style.display = 'none';
+}
+
+function disapper_question_page_dt710() {
+    question_dt710.innerHTML = '';
+    document.getElementById('option_dt710').style.display = 'none';
+}
+
+function go_to_question_dt700(current_question_id_dt700) {
+
+    disapper_final_page_dt700();
+    document.getElementById('option_dt700').style.display = 'block';
+    question_dt700.innerHTML = Questions[current_question_id_dt700].q;
+    for (let index = 0; index < Questions[current_question_id_dt700].a.length; index++) {
+        op_ensemble_dt700[index].innerHTML = Questions[current_question_id_dt700].a[index]        
+    }
+    if (current_question_id_dt700 == 0) {
+        document.getElementById('navigation_dt700').style.display = 'none';
+        op3_dt700.style.display = 'inline'
+    } else {
+        document.getElementById('navigation_dt700').style.display = 'block';
+        op3_dt700.style.display = 'none'
     }
 };
 
-function go_to_result() {
+function go_to_question_dt710(current_question_id_dt710) {
 
-    document.getElementById('question').innerHTML = '';
-    for (let index = 0; index < op_id.length-1; index++) {
-        document.getElementById(op_id[index]).style.display = 'none';
+    disapper_final_page_dt710();
+    document.getElementById('option_dt710').style.display = 'block';
+    question_dt710.innerHTML = Questions[current_question_id_dt710].q;
+    for (let index = 0; index < Questions[current_question_id_dt710].a.length; index++) {
+        op_ensemble_dt710[index].innerHTML = Questions[current_question_id_dt710].a[index]        
     }
-    
-    selected_color.innerHTML = '您选择的颜色为：' + current_color;
-    selected_shape.innerHTML = '您选择的把手形状为：' + current_shape;
+    if (current_question_id_dt710 == 0) {
+        document.getElementById('navigation_dt710').style.display = 'none';
+        op3_dt710.style.display = 'inline'
+    } else {
+        document.getElementById('navigation_dt710').style.display = 'block';
+        op3_dt710.style.display = 'none'
+    }
+};
 
-    for (let index = 0; index < number_ensemble.length; index++) {
-        if (current_color == number_ensemble[index].color &
-            current_shape == number_ensemble[index].shape) {
-        result.innerHTML = '应订购的编号为：' + number_ensemble[index].number;
+function go_to_result_dt700() {
+
+    disapper_question_page_dt700();
+
+    document.getElementById('selected_dt700').style.display = 'block';
+
+    selected_color_dt700.innerHTML = '您选择的颜色为：' + current_color_dt700;
+    selected_shape_dt700.innerHTML = '您选择的把手形状为：' + current_shape_dt700;
+
+    for (let index = 0; index < number_ensemble_dt700.length; index++) {
+        if (current_color_dt700 == number_ensemble_dt700[index].color &
+            current_shape_dt700 == number_ensemble_dt700[index].shape) {
+        result_dt700.innerHTML = '应订购的编号为：' + number_ensemble_dt700[index].number;
         break;
     }
     }
+    
 };
 
-function store_current_value(button_id) {
+function go_to_result_dt710() {
+
+    disapper_question_page_dt710();
+
+    document.getElementById('selected_dt710').style.display = 'block';
+
+    selected_color_dt710.innerHTML = '您选择的颜色为：' + current_color_dt710;
+    selected_shape_dt710.innerHTML = '您选择的把手形状为：' + current_shape_dt710;
+
+    for (let index = 0; index < number_ensemble_dt710.length; index++) {
+        if (current_color_dt710 == number_ensemble_dt710[index].color &
+            current_shape_dt710 == number_ensemble_dt710[index].shape) {
+        result_dt710.innerHTML = '应订购的编号为：' + number_ensemble_dt710[index].number;
+        break;
+    }
+    }
     
-    if (question.innerHTML == Questions[0].q) {
-        current_color = op_ensemble[button_id-1].innerHTML
-    } else if (question.innerHTML == Questions[1].q)
-    {
-        current_shape = op_ensemble[button_id-1].innerHTML
+};
+
+function store_current_value_dt700(button_id_dt700) {
+    switch (current_question_id_dt700) {
+        case 0:
+            current_color_dt700 = op_ensemble_dt700[button_id_dt700].innerHTML;
+            break;
+        case 1:
+            current_shape_dt700 = op_ensemble_dt700[button_id_dt700].innerHTML;
+            break;
+        default:
+            break;
     }
 };
 
-function show_question(current_question_id) {
-    go_to_question(current_question_id);
+function store_current_value_dt710(button_id_dt710) {
+    switch (current_question_id_dt710) {
+        case 0:
+            current_color_dt710 = op_ensemble_dt710[button_id_dt710].innerHTML;
+            break;
+        case 1:
+            current_shape_dt710 = op_ensemble_dt710[button_id_dt710].innerHTML;
+            break;
+        default:
+            break;
+    }
+};
 
-    op1.addEventListener('click', () => {
-        store_current_value(1);
+op0_dt700.addEventListener('click', () => {
+    store_current_value_dt700(0);
+    current_question_id_dt700 += 1;
+    if (current_question_id_dt700 < Questions.length) {
         
-        if (question.innerHTML != Questions[quantity_questions-1].q) {
-            current_question_id += 1
-            go_to_question(current_question_id);
-        } else {
-            go_to_result()
-        }
-    });
+        go_to_question_dt700(current_question_id_dt700)
+    } else {
+        go_to_result_dt700()
+    }
+});
+op1_dt700.addEventListener('click', () => {
+    store_current_value_dt700(1);
+    current_question_id_dt700 += 1;
+    if (current_question_id_dt700 < Questions.length) {
+        
+        go_to_question_dt700(current_question_id_dt700)
+    } else {
+        go_to_result_dt700()
+    }
+});
+op2_dt700.addEventListener('click', () => {
+    store_current_value_dt700(2);
+    current_question_id_dt700 += 1;
+    if (current_question_id_dt700 < Questions.length) {
+        
+        go_to_question_dt700(current_question_id_dt700)
+    } else {
+        go_to_result_dt700()
+    }
+});
+op3_dt700.addEventListener('click', () => {
+    store_current_value_dt700(3);
+    current_question_id_dt700 += 1;
+    if (current_question_id_dt700 < Questions.length) {
+        
+        go_to_question_dt700(current_question_id_dt700)
+    } else {
+        go_to_result_dt700()
+    }
+})
 
-    op2.addEventListener('click', () => {
-        store_current_value(2)
+op0_dt710.addEventListener('click', () => {
+    store_current_value_dt710(0);
+    current_question_id_dt710 += 1;
+    if (current_question_id_dt710 < Questions.length) {
         
-        if (question.innerHTML != Questions[quantity_questions-1].q) {
-            current_question_id += 1
-            go_to_question(current_question_id);
-            
-        } else {
-            go_to_result()
-        }
-    });
-    
-    op3.addEventListener('click', () => {
-        store_current_value(3)
+        go_to_question_dt710(current_question_id_dt710)
+    } else {
+        go_to_result_dt710()
+    }
+});
+op1_dt710.addEventListener('click', () => {
+    store_current_value_dt710(1);
+    current_question_id_dt710 += 1;
+    if (current_question_id_dt710 < Questions.length) {
         
-        if (question.innerHTML != Questions[quantity_questions-1].q) {
-            current_question_id += 1
-            go_to_question(current_question_id);
-            
-        } else {
-            go_to_result()
-        }
-    });
-    
-    op4.addEventListener('click', () => {
-        store_current_value(4)
+        go_to_question_dt710(current_question_id_dt710)
+    } else {
+        go_to_result_dt710()
+    }
+});
+op2_dt710.addEventListener('click', () => {
+    store_current_value_dt710(2);
+    current_question_id_dt710 += 1;
+    if (current_question_id_dt710 < Questions.length) {
         
-        if (question.innerHTML != Questions[quantity_questions-1].q) {
-            current_question_id += 1
-            go_to_question(current_question_id);
-            
-        } else {
-            go_to_result()
-        }
-    })
-}
+        go_to_question_dt710(current_question_id_dt710)
+    } else {
+        go_to_result_dt710()
+    }
+});
+op3_dt710.addEventListener('click', () => {
+    store_current_value_dt710(3);
+    current_question_id_dt710 += 1;
+    if (current_question_id_dt710 < Questions.length) {
+        
+        go_to_question_dt710(current_question_id_dt710)
+    } else {
+        go_to_result_dt710()
+    }
+})
+
+
+if (start) {
+    current_question_id_dt700 = 0;
+    current_question_id_dt710 = 0;
+    go_to_question_dt700(current_question_id_dt700);
+    go_to_question_dt710(current_question_id_dt700)
+};
