@@ -5,6 +5,7 @@ parent: DT700/710
 nav_order: 1
 ---
 <head>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style>
         h3 {
             color: darkred;
@@ -55,7 +56,12 @@ nav_order: 1
             text-align: center;
             color: darkred;
         }
+        #handle_G_pop_up, #handle_U_pop_up, #handle_J_pop_up {
+            display: none;
+            width: 150px;
+        }
     </style>
+    <link rel="stylesheet" href="\css\lightbox.min.css">
 </head>
 <body>
     <h2>{{ page.title }}</h2>
@@ -95,22 +101,27 @@ nav_order: 1
         </figure>
     </div>
     <h3>我们提供如下所示的把手形状：</h3>
-
     <div class="row">
         <figure class="column_3">
-            <img src="\assets\DT700\handle_G.jpg" alt="">
+            <a href="\assets\DT700\handle_G_real.jpg" data-lightbox="pop_up_combo">
+                <img src="\assets\DT700\handle_G.jpg" alt="" id="handle_G" class="with_pop_up_image"></a>
             <figcaption>G型</figcaption>
         </figure>
-
         <figure class="column_3">
-            <img src="\assets\DT700\handle_U.jpg" alt="">
+            <a href="\assets\DT700\handle_U_real.jpg" data-lightbox="pop_up_combo">
+                <img src="\assets\DT700\handle_U.jpg" alt="" id="handle_U" class="with_pop_up_image"></a>
             <figcaption>U型</figcaption>
         </figure>
-        
         <figure class="column_3">
-            <img src="\assets\DT700\handle_J.jpg" alt="">
+            <a href="\assets\DT700\handle_J_real.jpg" data-lightbox="pop_up_combo">
+                <img src="\assets\DT700\handle_J.jpg" alt="" id="handle_J" class="with_pop_up_image"></a>
             <figcaption>J型</figcaption>
         </figure>
+    </div>
+    <div class="pop_up_image_container">
+        <img src="\assets\DT700\handle_G_real.jpg" alt="" id="handle_G_pop_up">
+        <img src="\assets\DT700\handle_U_real.jpg" alt="" id="handle_U_pop_up">
+        <img src="\assets\DT700\handle_J_real.jpg" alt="" id="handle_J_pop_up">
     </div>
 
     <p>我们提供不锈钢原色，黑色，抛光黄铜色，抛光原色四种颜色，请使用以下选型问答确定<b>DT700</b> 前后模块的编号</p>
@@ -185,4 +196,5 @@ nav_order: 1
         </ul>
     </div>
     <script src="\js\dt700_module_selection.js"></script>
+    <script src="\js\lightbox-plus-jquery.js"></script>
 </body>
