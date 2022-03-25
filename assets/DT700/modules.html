@@ -29,8 +29,9 @@ nav_order: 1
         .navigation_container {
             margin-top: 2%;
         }
-        .result {
+        .result_container {
             color: brown;
+            margin-top: 4%;
         }
         .column_3 {
             float: left;
@@ -124,46 +125,29 @@ nav_order: 1
         <img src="\assets\DT700\handle_J_real.jpg" alt="" id="handle_J_pop_up">
     </div>
 
-    <p>我们提供不锈钢原色，黑色，抛光黄铜色，抛光原色四种颜色，请使用以下选型问答确定<b>DT700</b> 前后模块的编号</p>
+    <p>我们提供不锈钢原色，黑色，抛光黄铜色，抛光原色四种颜色，请使用以下选型问答确定前后模块的编号</p>
     <div class="panel">
-        <div class="question-container" id="question_dt700">
+        <div class="question-container" id="question">
             questions go here.
         </div>
-        <div class="option-container" id="option_dt700">
-            <button class="option" onclick="" id="op0_dt700">option0</button>
-            <button class="option" onclick="" id="op1_dt700">option1</button>
-            <button class="option" onclick="" id="op2_dt700">option2</button>
-            <button class="option" onclick="" id="op3_dt700">option3</button>
+        <div class="option-container" id="option">
+            <button class="option" onclick="" id="op0">option0</button>
+            <button class="option" onclick="" id="op1">option1</button>
+            <button class="option" onclick="" id="op2">option2</button>
+            <button class="option" onclick="" id="op3">option3</button>
         </div>
-        <div id="selected_dt700">
-            <p id="selected_color_dt700"></p>
-            <p id="selected_shape_dt700"></p>
+        <div id="selected">
+            <p id="selected_model"></p>
+            <p id="selected_color"></p>
+            <p id="selected_shape"></p>
         </div>
-        <div class="result" id="result_dt700"></div>
-        <div class="navigation_container" id="navigation_dt700">
-            <button id="last_one_dt700">上一题</button>
-            <button id="try_again_dt700">重新选择</button>
+        <div class="result_container" id="result">
+            <p id="result_ex">应订购的<b>外模块</b>编号为：</p>
+            <p id="result_in">应订购的<b>内模块</b>编号为：</p>
         </div>
-	</div>
-    <p>使用以下选型问答确定<b>DT710</b> 前后模块的编号</p>
-    <div class="panel">
-        <div class="question-container" id="question_dt710">
-            questions go here.
-        </div>
-        <div class="option-container" id="option_dt710">
-            <button class="option" onclick="" id="op0_dt710">option0</button>
-            <button class="option" onclick="" id="op1_dt710">option1</button>
-            <button class="option" onclick="" id="op2_dt710">option2</button>
-            <button class="option" onclick="" id="op3_dt710">option3</button>
-        </div>
-        <div id="selected_dt710">
-            <p id="selected_color_dt710"></p>
-            <p id="selected_shape_dt710"></p>
-        </div>
-        <div class="result" id="result_dt710"></div>
-        <div class="navigation_container" id="navigation_dt710">
-            <button id="last_one_dt710">上一题</button>
-            <button id="try_again_dt710">重新选择</button>
+        <div class="navigation_container" id="navigation">
+            <button id="last_one">上一题</button>
+            <button id="try_again">重新选择</button>
         </div>
 	</div>
     <h3>判断开门方向</h3>
@@ -195,6 +179,6 @@ nav_order: 1
             <li><a href="\assets\DT700\dt710-synopsis-cn.pdf">DT710概览（中文）</a></li>
         </ul>
     </div>
-    <script src="\js\dt700_module_selection.js"></script>
+    <script src="\js\dt700_module_selection_separate.js"></script>
     <script src="\js\lightbox-plus-jquery.js"></script>
 </body>

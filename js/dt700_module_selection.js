@@ -305,7 +305,6 @@ op3_dt710.addEventListener('click', () => {
     }
 })
 
-
 if (start) {
     current_question_id_dt700 = 0;
     current_question_id_dt710 = 0;
