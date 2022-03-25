@@ -1,6 +1,6 @@
 const questions = new Array(
     {q: '请选择型号', a: ['dt700', 'dt710']},
-    {q: "请选择一个颜色", a: ['不锈钢原色', '黑色', '抛光黄铜色', '抛光原色']},
+    {q: "请选择一个颜色", a: ['不锈钢原色', '黑色', '抛光金色', '抛光原色']},
     {q: "请选择一个把手样式", a: ['G', 'U', 'J']}
 );
 
@@ -11,12 +11,12 @@ const number_ensemble = new Array(
     {ex_number: '917.63.625', in_number: '917.63.275', model: 'dt710', color: '不锈钢原色', shape: 'U'},
     {ex_number: '917.63.530', in_number: '917.63.280', model: 'dt700', color: '不锈钢原色', shape: 'J'},
     {ex_number: '917.63.630', in_number: '917.63.280', model: 'dt710', color: '不锈钢原色', shape: 'J'},
-    {ex_number: '917.63.521', in_number: '917.63.271', model: 'dt700', color: '抛光黄铜色', shape: 'G'},
-    {ex_number: '917.63.621', in_number: '917.63.271', model: 'dt710', color: '抛光黄铜色', shape: 'G'},
-    {ex_number: '917.63.526', in_number: '917.63.276', model: 'dt700', color: '抛光黄铜色', shape: 'U'},
-    {ex_number: '917.63.626', in_number: '917.63.276', model: 'dt710', color: '抛光黄铜色', shape: 'U'},
-    {ex_number: '917.63.531', in_number: '917.63.281', model: 'dt700', color: '抛光黄铜色', shape: 'J'},
-    {ex_number: '917.63.631', in_number: '917.63.281', model: 'dt710', color: '抛光黄铜色', shape: 'J'},
+    {ex_number: '917.63.521', in_number: '917.63.271', model: 'dt700', color: '抛光金色', shape: 'G'},
+    {ex_number: '917.63.621', in_number: '917.63.271', model: 'dt710', color: '抛光金色', shape: 'G'},
+    {ex_number: '917.63.526', in_number: '917.63.276', model: 'dt700', color: '抛光金色', shape: 'U'},
+    {ex_number: '917.63.626', in_number: '917.63.276', model: 'dt710', color: '抛光金色', shape: 'U'},
+    {ex_number: '917.63.531', in_number: '917.63.281', model: 'dt700', color: '抛光金色', shape: 'J'},
+    {ex_number: '917.63.631', in_number: '917.63.281', model: 'dt710', color: '抛光金色', shape: 'J'},
     {ex_number: '917.63.523', in_number: '917.63.273', model: 'dt700', color: '黑色', shape: 'G'},
     {ex_number: '917.63.623', in_number: '917.63.273', model: 'dt710', color: '黑色', shape: 'G'},
     {ex_number: '917.63.528', in_number: '917.63.278', model: 'dt700', color: '黑色', shape: 'U'},
@@ -96,7 +96,7 @@ function go_to_question(current_question_id) {
         op0.style.display = 'inline';
         op1.style.display = 'inline';
         op2.style.display = 'inline';
-        op3.style.display = 'inline';
+        op3.style.display = 'none';
     } else {
         document.getElementById('navigation').style.display = 'block';
         op0.style.display = 'inline';

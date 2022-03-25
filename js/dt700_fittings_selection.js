@@ -5,26 +5,26 @@ const questions_screw = new Array(
     },
     {
         q: '请选择颜色',
-        a: ['不锈钢原色', '黑色', '抛光黄铜色', '抛光色']
+        a: ['不锈钢原色', '黑色', '抛光金色', '抛光色']
     }
 );
 
 const number_ensemble_screw = new Array(
     {number: '917.80.851', door_width: '35-45', color: '不锈钢原色'},
     {number: '917.80.881', door_width: '35-45', color: '黑色'},
-    {number: '917.80.871', door_width: '35-45', color: '抛光黄铜色'},
+    {number: '917.80.871', door_width: '35-45', color: '抛光金色'},
     {number: '917.80.861', door_width: '35-45', color: '抛光色'},
     {number: '917.80.852', door_width: '45-65', color: '不锈钢原色'},
     {number: '917.80.882', door_width: '45-65', color: '黑色'},
-    {number: '917.80.872', door_width: '45-65', color: '抛光黄铜色'},
+    {number: '917.80.872', door_width: '45-65', color: '抛光金色'},
     {number: '917.80.862', door_width: '45-65', color: '抛光色'},
     {number: '917.80.853', door_width: '65-85', color: '不锈钢原色'},
     {number: '917.80.883', door_width: '65-85', color: '黑色'},
-    {number: '917.80.873', door_width: '65-85', color: '抛光黄铜色'},
+    {number: '917.80.873', door_width: '65-85', color: '抛光金色'},
     {number: '917.80.863', door_width: '65-85', color: '抛光色'},
     {number: '917.80.854', door_width: '85-95', color: '不锈钢原色'},
     {number: '917.80.884', door_width: '85-95', color: '黑色'},
-    {number: '917.80.874', door_width: '85-95', color: '抛光黄铜色'},
+    {number: '917.80.874', door_width: '85-95', color: '抛光金色'},
     {number: '917.80.864', door_width: '85-95', color: '抛光色'}
 );
 
@@ -125,18 +125,20 @@ function disapper_question_page_spindle() {
 function go_to_question_screw(current_question_id_screw) {
     disapper_final_page_screw();
     document.getElementsByClassName('option_container')[0].style.display = 'block';
-
+    
     if (current_question_id_screw == 0) {
         document.getElementsByClassName('navigation_container')[0].style.display = 'none';
+        panel_combo.screw.op3.style.display = 'inline';
     } else {
         document.getElementsByClassName('navigation_container')[0].style.display = 'block';
+        panel_combo.screw.op3.style.display = 'none';
     }
 
     panel_combo.screw.question.innerHTML = questions_screw[current_question_id_screw].q;
 
     for (let index = 0; index < option_ensemble_screw.length; index++) {
         option_ensemble_screw[index].innerHTML = questions_screw[current_question_id_screw].a[index]
-    }
+    };
 };
 
 function go_to_question_spindle(current_question_id_spindle) {
