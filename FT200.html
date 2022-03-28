@@ -4,114 +4,109 @@ title: FT200
 permalink: /FT200
 has_children: true
 ---
-<html>
-    <head>
-        <style>
-            .responsive {float: right; width: 50%; height: auto;}
-            .title {color: #991601;}
-            table {margin-top: 5%;}
-            .choices_container {
-                float: left;
-                padding-right: 1%
-            }
-            .choices_container {
-                display: none;
-            }
-            ul {
-                cursor: pointer;
-            }
-        </style>
-        <link rel="stylesheet" href="\css\lightbox.min.css">
-    </head>
-    <body>
-        <h2>
-            <a class="title" href="https://www.hafele.com.de/en/product/
-            furniture-terminal-ft-200-ft-200-cap-dialock-for-controlling-efl-
-            furniture-locks-connection-for-2-fan-200-antennas/
-            0000012d0001095800020023/#SearchParameter=&@QueryTerm=ft200&@
-            P.FF.followSearch=8831&PageNumber=1&OriginalPageSize=12&PageSize=12&
-            Position=1&OrigPos=1&ProductListSize=169&PDP=true">{{ page.title }}</a>
-        </h2>
-        <div class="choices_container" id="cable" onmouseleave="disappear_list(list_cable)">
-            <button class="button_group" id="cable_button" onmouseenter="show_list(list_cable)">请选择连线长度（米）</button>
-            <ul id="cable_option">
-                <li><a onclick="fill_in_number_cable(this.innerHTML)">0.5</a></li>
-                <li><a onclick="fill_in_number_cable(this.innerHTML)">1</a></li>
-                <li><a onclick="fill_in_number_cable(this.innerHTML)">3</a></li>
-                <li><a onclick="fill_in_number_cable(this.innerHTML)">5</a></li>
-                <li><a onclick="fill_in_number_cable(this.innerHTML)">10</a></li>
-            </ul>
-        </div>
-        <div class="choices_container" id="antenna" onmouseleave="disappear_list(list_antenna)">
-            <button class="button_group" id="antenna_button" onmouseenter="show_list(list_antenna)">请选择读头线缆长度（米）</button>
-            <ul id="antenna_option">
-                <li><a onclick="fill_in_number_antenna(this.innerHTML)">1</a></li>
-                <li><a onclick="fill_in_number_antenna(this.innerHTML)">3</a></li>
-                <li><a onclick="fill_in_number_antenna(this.innerHTML)">5</a></li>
-            </ul>
-        </div>
-        <div class="choices_container" id="power" onmouseleave="disappear_list(list_power)">
-            <button class="button_group" id="power_button" onmouseenter="show_list(list_power)">请选择电源产地</button>
-            <ul id="power_option">
-                <li><a onclick="fill_in_number_power(this.innerHTML)">国产电源</a></li>
-                <li><a onclick="fill_in_number_power(this.innerHTML)">进口电源（德国）</a></li>
-            </ul>
-        </div
-        <table>
-            <caption>基础物料清单</caption>
-            <tr>
-                <th>名称</th>
-                <th>编号</th>
-                <th>数量</th>
-            </tr>
-            <tr>
-                <td>控制器/FT200</td>
-                <td>237.59.010</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td><a href="/EFL3">锁头/EFL3</a></td>
-                <td>237.59.000</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td><a href="https://www.hafele.com.de/en/product/
-                    connection-cable-cc-200-dialock/23759022/
-                    ?MasterSKU=0000015f0002019a00010023">
-                    连线/CC200</a>
-                </td>
-                <td id="cable_number">237.59.022</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td><a href="https://www.hafele.com.de/en/product/
-                    antenna-fan-200-dialock/23759061/
-                    ?MasterSKU=0000015f000202f600010023">
-                    读头/FAN200</a>
-                </td>
-                <td id="antenna_number">237.59.061</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td><a href="/power-supply">电源</a></td>
-                <td id="power_number">833.02.999</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td><a href="\assets\FT200\key.jpg" data-lightbox="key">卡片</a></td>
-                <td>根据标准(Mifare 或 Tag-it)，款式和颜色确定
-                    <a href="\assets\FT200\catalog\fancy-key-cards.pdf">编号</a>
-                </td>
-            </tr>
-        </table>
-        <ul>
-            <li><a href="/assets/FT200/catalog/pages_ch.pdf">中文单页</a></li>
-            <li><a href="/assets/FT200/catalog/pages_en.pdf">英文单页</a></li>
-            <li><a href="\assets\FT200\ft200_mounting.pdf">FT200安装示意图</a></li>
-            <li><a href="\assets\FT200\fan200_mounting.pdf">读头FAN200安装示意图</a></li>
+<head>
+    <style>
+        .responsive {float: right; width: 50%; height: auto;}
+        .title {color: #991601;}
+        table {margin-top: 5%;}
+        .choices_container {
+            float: left;
+            padding-right: 1%
+        }
+        .choices_container {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="\css\lightbox.min.css">
+</head>
+<body>
+    <h2>
+        <a class="title" href="https://www.hafele.com.de/en/product/
+        furniture-terminal-ft-200-ft-200-cap-dialock-for-controlling-efl-
+        furniture-locks-connection-for-2-fan-200-antennas/
+        0000012d0001095800020023/#SearchParameter=&@QueryTerm=ft200&@
+        P.FF.followSearch=8831&PageNumber=1&OriginalPageSize=12&PageSize=12&
+        Position=1&OrigPos=1&ProductListSize=169&PDP=true">{{ page.title }}</a>
+    </h2>
+    <div class="choices_container" id="cable" onmouseleave="disappear_list(list_cable)">
+        <button class="button_group" id="cable_button" onmouseenter="show_list(list_cable)">请选择连线长度（米）</button>
+        <ul id="cable_option">
+            <li><a onclick="fill_in_number_cable(this.innerHTML)">0.5</a></li>
+            <li><a onclick="fill_in_number_cable(this.innerHTML)">1</a></li>
+            <li><a onclick="fill_in_number_cable(this.innerHTML)">3</a></li>
+            <li><a onclick="fill_in_number_cable(this.innerHTML)">5</a></li>
+            <li><a onclick="fill_in_number_cable(this.innerHTML)">10</a></li>
         </ul>
-        <div class="responsive"><img src="/assets/FT200/FT200.jpg" alt=""></div>
-        <script src="\js\lightbox-plus-jquery.js"></script>
-        <script src="\js\ft200_components_selection.js"></script>
-    </body>
-</html>
+    </div>
+    <div class="choices_container" id="antenna" onmouseleave="disappear_list(list_antenna)">
+        <button class="button_group" id="antenna_button" onmouseenter="show_list(list_antenna)">请选择读头线缆长度（米）</button>
+        <ul id="antenna_option">
+            <li><a onclick="fill_in_number_antenna(this.innerHTML)">1</a></li>
+            <li><a onclick="fill_in_number_antenna(this.innerHTML)">3</a></li>
+            <li><a onclick="fill_in_number_antenna(this.innerHTML)">5</a></li>
+        </ul>
+    </div>
+    <div class="choices_container" id="power" onmouseleave="disappear_list(list_power)">
+        <button class="button_group" id="power_button" onmouseenter="show_list(list_power)">请选择电源产地</button>
+        <ul id="power_option">
+            <li><a onclick="fill_in_number_power(this.innerHTML)">国产电源</a></li>
+            <li><a onclick="fill_in_number_power(this.innerHTML)">进口电源（德国）</a></li>
+        </ul>
+    </div
+    <table>
+        <caption>基础物料清单</caption>
+        <tr>
+            <th>名称</th>
+            <th>编号</th>
+            <th>数量</th>
+        </tr>
+        <tr>
+            <td>控制器/FT200</td>
+            <td>237.59.010</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="/EFL3">锁头/EFL3</a></td>
+            <td>237.59.000</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hafele.com.de/en/product/
+                connection-cable-cc-200-dialock/23759022/
+                ?MasterSKU=0000015f0002019a00010023">
+                连线/CC200</a>
+            </td>
+            <td id="cable_number">237.59.022</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.hafele.com.de/en/product/
+                antenna-fan-200-dialock/23759061/
+                ?MasterSKU=0000015f000202f600010023">
+                读头/FAN200</a>
+            </td>
+            <td id="antenna_number">237.59.061</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="/power-supply">电源</a></td>
+            <td id="power_number">833.02.999</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td><a href="\assets\FT200\key.jpg" data-lightbox="key">卡片</a></td>
+            <td>根据标准(Mifare 或 Tag-it)，款式和颜色确定
+                <a href="\assets\FT200\catalog\fancy-key-cards.pdf">编号</a>
+            </td>
+        </tr>
+    </table>
+    <ul>
+        <li><a href="/assets/FT200/catalog/pages_ch.pdf">中文单页</a></li>
+        <li><a href="/assets/FT200/catalog/pages_en.pdf">英文单页</a></li>
+        <li><a href="\assets\FT200\ft200_mounting.pdf">FT200安装示意图</a></li>
+        <li><a href="\assets\FT200\fan200_mounting.pdf">读头FAN200安装示意图</a></li>
+    </ul>
+    <div class="responsive"><img src="/assets/FT200/FT200.jpg" alt=""></div>
+    <script src="\js\lightbox-plus-jquery.js"></script>
+    <script src="\js\ft200_components_selection.js"></script>
+</body>
