@@ -8,9 +8,18 @@ has_children: true
     <style>
         table {margin-top: 5%;}
         caption {text-align: left;}
+        .panel {
+            background-color: beige;
+            text-align: center;
+        }
+        .answer_container {
+            margin-top: 2%;
+        }
+        .navigation_container {
+            margin-top: 2%;
+        }
     </style>
     <link rel="stylesheet" href="\css\lightbox.min.css">
-    
 </head>
 <body>
     <h2>HDM(Hafele Dialock Manager)</h2>
@@ -36,6 +45,19 @@ has_children: true
             <td></td>
         </tr>
     </table>
+    <p>如下问答展示了以上物料的采购流程，请海福乐销售人员根据该流程下单采购AKC和宏文件</p>
+    <div class="panel">
+        <div class="question_container" id="question">是否有可用的AKC?</div>
+        <div class="answer_container" id="answer">
+            <button id="button_yes">有</button>
+            <button id="button_no" onclick="">没有</button>
+        </div>
+        <div class="step_container" id="current_step" ></div>
+        <div class="navigation_container" id="navigation">
+            <button id="next_step" onclick="">下一步</button>
+            <button id="try_again">重新选择</button>
+        </div>
+    </div>
     <script src="\js\lightbox-plus-jquery.js"></script>
-    
+    <script src="\js\add_on_ordering_workflow.js"></script>
 </body>
