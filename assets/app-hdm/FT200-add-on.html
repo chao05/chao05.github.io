@@ -5,14 +5,34 @@ parent: 功能扩展文件/Add-on
 grand_parent: app(HDM)
 ---
 <head>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+        figcaption {
+            text-align: center;
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <h3 style="margin-bottom: 3%;">请根据对应的AKC序列号，点击以下链接下载add-on</h3>
-    <p>'DM22005'可激活报警功能（以下未额外标注均为此宏文件）;<br>'DM22009'可激活报警功能和分别控制功能（读头#1->锁头#1和#2，读头#2->锁头#3和#4）;<br>
-        'DM22015'可激活报警功能和分别控制功能（读头#1->锁头#1,#2和#3，读头#2->锁头#4） </p>
-    <figure>
-        <img src="\assets\app-hdm\antenna_port_position.jpg" alt="">
-    </figure>
+    <ol>
+        <li>'DM22005'可激活报警功能（以下未额外标注均为此宏文件）</li>
+        <li>'DM22009'可激活报警功能和分别控制功能（读头#1->锁头#1和#2，读头#2->锁头#3和#4）</li>
+        <li>'DM22015'可激活报警功能和分别控制功能（读头#1->锁头#1,#2和#3，读头#2->锁头#4）</li>
+    </ol>
+    <div class="row">
+        <figure>
+            <img src="\assets\app-hdm\port_position.jpg" alt="">
+            <figcaption>锁头侧</figcaption>
+        </figure>
+        <figure>
+            <img src="\assets\app-hdm\antenna_position.jpg" alt="">
+            <figcaption>读头侧</figcaption>
+        </figure>
+    </div>
     <ul>
         <li><a download href="/assets/app-hdm/add-on/FT200/AlrmPrem_AKC169-171_FT200.Signed.dlkAddon">169-171</a></li>
         <li><a download href="/assets/app-hdm/add-on/FT200/AlrmPrem_AKC175-177_FT200.Signed.dlkAddon.dlkAddon">175-177</a></li>
