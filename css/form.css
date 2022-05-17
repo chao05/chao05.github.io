@@ -1,0 +1,30 @@
+fieldset {
+    width: fit-content;
+}
+
+input[type='submit'] {
+    color: brown;
+}
+
+input, select {
+    float: right;
+}
+
+input[type='text'][type='email'], select {
+    width: 170px;
+}
+
+label {
+    font-size:medium;
+    font-weight: normal;
+    color: brown;
+}
+
+legend {
+    font-size: larger;
+    color: brown;
+}
+
+.form_feedback, .if_required {
+    color: royalblue;
+}

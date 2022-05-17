@@ -1,0 +1,53 @@
+---
+layout: page
+title: AKC下单通知/AKC notice
+parent: app(HDM)
+has_children:
+---
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/form.css">
+    </head>
+    <body>
+        <h3>{{ page.title }}</h3>
+        <div>
+            <p>该表格仅供公司内部人员使用</p>
+        </div>
+        <fieldset>
+            <form action="" method="post" id="akc_notice_form">
+                <p>
+                    <label for="id_email">下单人邮箱地址:</label>
+                    <input type="email" name="email" placeholder="@hafele.com.cn" maxlength="254" required="" id="id_email">
+                </p>
+                <p>
+                    <label for="id_po_number">销售单号（'7'开头）:</label>
+                    <input type="text" name="po_number" placeholder="76543210" maxlength="10" required="" id="id_po_number">
+                </p>
+                <p>
+                    <label for="id_client">客户:</label>
+                    <input type="text" name="client" maxlength="20" id="id_client">
+                </p>
+                <p>
+                    <label for="id_salesperson">销售人员:</label>
+                    <input type="text" name="salesperson" maxlength="10" id="id_salesperson">
+                </p>
+                <p>
+                    <label for="id_office">分公司:</label>
+                    <select name="office" id="id_office">
+                        <option value="" selected="">---------</option>
+        
+                        <option value="bj">北京</option>
+        
+                        <option value="sh">上海</option>
+        
+                        <option value="gz">广州</option>
+        
+                        <option value="cd">成都</option>
+                    </select>
+                </p>
+                <input type="submit" value="提交" id="form_submit">
+            </form>
+            <p class="if_required">该表格前两项为必填，其余项为选填。</p>
+        </fieldset>
+    </body>
+</html>
