@@ -1,0 +1,26 @@
+---
+layout: page
+title: 接入警报装置/aux-ouput for alarm
+parent: 扩展输出/aux-ouput
+grand_parent: FT200
+---
+<head>
+    <style>
+        .title {text-align: center;}
+        .responsive {padding-bottom: 75%; position: relative; margin-top: 3%;}
+        .video {width: 100%; height: 100%; position: absolute;}
+    </style>
+</head>
+<body>
+    <h2 class="title">{{page.title}}</h2>
+    <p style="margin-top: 3%;">
+        FT200支持使用其扩展输出接口接入外部警报电路，从而实现当锁头未及时关闭时，警报电路使用声光等方式发出提示。
+        如下视频所示，万用表接入继电器的常开（NO）和COM端口，当锁头超时未锁闭时，常开（NO）和COM端口导通，万用表蜂鸣器开始响铃。
+        当锁头锁闭，万用表蜂鸣器响铃停止。FT200只提供导通，断开的控制功能，不为电路供电。
+    </p>
+    <div class="responsive">
+        <iframe src="//player.bilibili.com/player.html?aid=597101008&bvid=BV1DB4y1X7JD&cid=735476990&page=1" 
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
+    </div>
+</body>
+
