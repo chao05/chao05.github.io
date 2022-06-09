@@ -1,0 +1,25 @@
+---
+layout: page
+title: 接入门磁/aux-input for door contact
+parent: 扩展接口/aux-port
+grand_parent: FT200
+---
+<head>
+    <style>
+        .title {text-align: center;}
+        .responsive {padding-bottom: 75%; position: relative; margin-top: 3%;}
+        .video {width: 100%; height: 100%; position: absolute;}
+    </style>
+</head>
+<body>
+    <h2 class="title">{{page.title}}</h2>
+    <p style="margin-top: 3%;">
+        FT200支持使用其扩展输入接口接收外部电路的输入信号。如下图展示了使用输入接口接收门磁信号，并同时启用输出接口。
+        该视频设定控制器检测到刷卡十秒后未关门，发出警报提示。刷卡后开门，此时门磁回路断开。FT200默认刷卡后开锁时间持续三秒（该时间可调），
+        即万用表蜂鸣器响铃三秒。刷卡十秒后，外部电路（万用表）蜂鸣器开始响铃报警，关门后（门磁回路接通）响铃警报停止。
+    </p>
+    <div class="responsive">
+        <iframe src="//player.bilibili.com/player.html?aid=469799184&bvid=BV12T411V74t&cid=741754780&page=1" 
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
+    </div>
+</body>
