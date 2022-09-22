@@ -4,8 +4,16 @@ title: app(HDM)
 permalink: /app_files
 has_children: true
 ---
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
+        .video {width: 100%; height: 100%; position: absolute;}
+        .responsive {padding-bottom: 75%; position: relative; margin-top: 3%;}
         table {margin-top: 3%;}
         caption {text-align: left;}
         .panel {
@@ -22,9 +30,17 @@ has_children: true
     <link rel="stylesheet" href="\css\lightbox.min.css">
 </head>
 <body>
-    <h2>HDM(Hafele Dialock Manager)</h2>
+    <h2>HMDM(Hafele my Dialock Manager)</h2>
+    <p>以下视频为您介绍了HMDM app的两种使用模式。您可以使用独立模式并用该app导入您需要的扩展功能。
+        您也可以使用项目模式，将一个店铺中的所有设备添加入一个虚拟店铺中。
+        这样您可以定制化管理设备，卡片，帮助您快速完成一整个店铺的锁具设置。</p>
+    
+    <div class="responsive">
+        <iframe frameborder="0" src="https://tv.sohu.com/s/sohuplayer/iplay.html?bid=385271121&autoplay=true&disablePlaylist=true" 
+        allowFullScreen="true" scrolling="no" class="video"></iframe>
+    </div>
     <table>
-        <caption >使用该app编制设备，需要用到以下三种物料：</caption>
+        <caption >使用该app的独立模式编制设备，需要用到以下三种物料：</caption>
         <tr>
             <th>名称</th>
             <th>编号</th>
@@ -62,3 +78,4 @@ has_children: true
     <script src="\js\lightbox-plus-jquery.js"></script>
     <script src="\js\add_on_ordering_workflow.js"></script>
 </body>
+</html>
