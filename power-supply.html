@@ -2,29 +2,68 @@
 layout: page
 title: 电源/power supply
 permalink: /power-supply
-has_children: true
+has_children: false
 ---
-<head>
-    <style>
-        table {margin-top: 5%;}
-        td {text-align: center;}
-    </style>
-</head>
-<body>
-    <h2>{{ page.title }}</h2>
-    <table>
-        <tr>
-            <th>名称</th>
-            <th>编号</th>
-        </tr>
-        <tr>
-            <td>国产电源</td>
-            <td>833.02.999</td>
-        </tr>
-        <tr>
-            <td>进口电源（德国）</td>
-            <td>237.58.180</td>
-        </tr>
-    </table>
-    <div style="float: right; max-width: 50%; height: auto;"><img src="/assets/power-supply/power-supply.jpg" alt="power supply image"></div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>power supply</title>
+        <style>
+            table {margin-top: 5%;}
+            td {text-align: center;}
+            details {margin-bottom: 1em;}
+        </style>
+    </head>
+    <body>
+        <h2>{{ page.title }}</h2>
+        <table>
+            <tr>
+                <th>特色</th>
+                <th>编号</th>
+                <th>输出功率</th>
+            </tr>
+            <tr>
+                <td>性价比</td>
+                <td>833.02.999</td>
+                <td>12V * 2A = 24W</td>
+            </tr>
+            <tr>
+                <td>稳定</td>
+                <td><a href="https://www.hafele.com.de/en/product/driver-ps-4/P-00926506/">237.58.180</a></td>
+                <td>12V * 2.5A = 30W</td>
+            </tr>
+            <tr>
+                <td>大功率输出</td>
+                <td><a href="https://www.hafele.com.de/en/product/driver-ps-2-dialock/P-00871735/">237.58.141</a></td>
+                <td>12V * 5A = 60W</td>
+            </tr>
+        </table>
+        <div style="float: right; max-width: 50%; height: auto;">
+            <img src="/assets/power-supply/power-supply.jpg" alt="power supply image"></div>
+        <details>
+            <summary>性价比款(833.02.999)</summary>
+            <ul>
+                <li><a href="\assets\power-supply\domestics\domestics-catalog.pdf">单页</a></li>
+                <li><a href="\assets\power-supply\domestics\domestic-fcc.pdf">FCC认证</a></li>
+                <li><a href="\assets\power-supply\domestics\domestic-ul.pdf">UL认证</a></li>
+                <li><a href="\assets\power-supply\domestics\domestic-kc.pdf">KC认证</a></li>
+            </ul>
+        </details>
+        <details>
+            <summary>稳定款(<a href="https://www.hafele.com.de/en/product/driver-ps-4/P-00926506/">237.58.180</a>)</summary>
+            <ul>
+                <li><a href="\assets\power-supply\overseas\overseas-catalog.pdf">单页</a></li>
+                <li><a href="\assets\power-supply\overseas\certificate\australia_certificate.pdf">澳大利亚认证</a></li>
+                <li><a href="\assets\power-supply\overseas\certificate\ul_certificate.pdf">'UL'认证</a></li>
+                <li><a href="\assets\power-supply\overseas\certificate\siq_certificate.pdf">'SIQ'认证</a></li>
+                <li><a href="\assets\power-supply\overseas\certificate\cb_test_si-5843.pdf">cb_test_si-5843</a></li>
+                <li><a href="\assets\power-supply\overseas\certificate\cb_test_si-7328.pdf">cb_test_si-7328</a></li>
+            </ul>
+        </details>
+        
+        
+    </body>
+</html>
