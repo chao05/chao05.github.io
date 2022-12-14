@@ -17,3 +17,6 @@ figcaption {
                 column-count: 2;}
 }
 #title {margin-bottom: 1em;}
+input {width: 100%;
+    padding: 8px;
+    margin: 20px 0 20px 0;}
