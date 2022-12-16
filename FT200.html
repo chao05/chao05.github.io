@@ -11,12 +11,13 @@ has_children: true
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\css\lightbox.min.css">
-    <link rel="stylesheet" href="\css\ft200.css">
-    <link rel="stylesheet" href="\css\tableStyle.css">
     <style>
         .responsive {float: right; width: 50%; height: auto; margin-top: 4em;}
         .title {color: #991601;}
         table {margin-top: 5%;}
+        select {
+            border-style: hidden;
+        }
         .choices_container {
             float: left;
             padding-right: 1%;
@@ -112,11 +113,14 @@ has_children: true
     <table>
         <caption>蜂鸣器列表</caption>
         <thead>
-            <th>名称</th>
-            <th>编号</th>
-            <th>声音</th>
+            <tr>
+                <th>名称</th>
+                <th>编号</th>
+                <th>声音</th>
+            </tr>
+            
         </thead>
-        <tbody>
+        <tbody class="tableBody">
             <tr>
                 <td>内置蜂鸣器</td>
                 <td>无</td>
