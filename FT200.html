@@ -14,7 +14,9 @@ has_children: true
     <style>
         .responsive {float: right; width: 50%; height: auto; margin-top: 4em;}
         .title {color: #991601;}
-        table {margin-top: 5%;}
+        table {margin-top: 5%;
+                border-collapse: collapse;}
+        tr:nth-child(even) {background-color: red;}
         select {
             border-style: hidden;
         }
@@ -36,12 +38,9 @@ has_children: true
     <table>
         <caption>基础物料清单</caption>
         <thead>
-            <tr>
-                <th>名称</th>
-                <th>编号</th>
-                <th>数量</th>
-            </tr>
-            
+            <th>名称</th>
+            <th>编号</th>
+            <th>数量</th>
         </thead>
         <tbody>
             <tr>
@@ -103,9 +102,7 @@ has_children: true
                 </td>
             </tr>
         </tbody>
-        
     </table>
-    
     <figure>
         <img src="\assets\FT200\ft200_config.jpg" alt="" srcset="">
         <figcaption>FT200典型配置</figcaption>
@@ -113,14 +110,11 @@ has_children: true
     <table>
         <caption>蜂鸣器列表</caption>
         <thead>
-            <tr>
-                <th>名称</th>
-                <th>编号</th>
-                <th>声音</th>
-            </tr>
-            
+            <th>名称</th>
+            <th>编号</th>
+            <th>声音</th>
         </thead>
-        <tbody class="tableBody">
+        <tbody>
             <tr>
                 <td>内置蜂鸣器</td>
                 <td>无</td>
@@ -138,7 +132,6 @@ has_children: true
                 <td><a href="\assets\FT200\ex_alarm_2.wav" target="_blank" rel="noopener noreferrer">播放</a></td>
             </tr>
         </tbody>
-        
     </table>
     <div class="responsive"><img src="/assets/FT200/FT200.jpg" alt=""></div>
     <ul>
@@ -161,7 +154,6 @@ has_children: true
             </details>
         </li>
     </ul> 
-
     <script src="\js\lightbox-plus-jquery.js"></script>
     <script src="\js\ft200_components_selection.js"></script>
 </body>
