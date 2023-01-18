@@ -1,0 +1,10 @@
+#responsive_list {-webkit-column-count: 3;
+    -moz-column-count: 3;
+    -o-column-count: 3;
+    column-count: 3;}
+@media screen and (max-width: 480px) {
+#responsive_list {-webkit-column-count: 2;
+        -moz-column-count: 2;
+        -o-column-count: 2;
+        column-count: 2;}
+}

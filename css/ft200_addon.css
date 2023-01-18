@@ -6,16 +6,6 @@ figcaption {
     text-align: center;
     color: red;
 }
-#add_on_list {-webkit-column-count: 3;
-            -moz-column-count: 3;
-            -o-column-count: 3;
-            column-count: 3;}
-@media screen and (max-width: 480px) {
-    #add_on_list {-webkit-column-count: 2;
-                -moz-column-count: 2;
-                -o-column-count: 2;
-                column-count: 2;}
-}
 #title {margin-bottom: 1em;}
 #serialNumber {width: 100%;
     padding: 8px;
