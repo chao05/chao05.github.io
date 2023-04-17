@@ -3,19 +3,29 @@ layout: page
 title: 导入宏/loading add-on
 parent: app(HDM)
 ---
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         h2 {text-align: center;}
         .video-wrapper {padding-bottom: 75%; position: relative; margin-top: 3%;}
         .video {width: 100%; height: 100%; position: absolute;}
-        b {color: brown;}
+        b, em {color: brown;}
     </style>
+    <title>{{page.title}}</title>
 </head>
 <body>
     <h2>{{ page.title }}</h2>
     <p style="margin-top: 3%;">
         Dialock二代家具锁支持导入客户指定的扩展功能。需要用到AKC, HMDM app和宏(add-on)文件。
         一套AKC包含三张卡片，编制时使用任意一张即可。编制之前需先打开手机的蓝牙和NFC功能。如下视频展示了导入扩展功能的操作步骤。
+    </p>
+    <p>
+        请注意：使用任意卡片（“红卡”，“绿卡”，用户卡，蓝牙卡片）做刷卡操作时，
+        <em>卡片轻触读头即可，不需要长时间靠近读头。</em>在某些设置下，将卡片长时间靠近读头会导致进入其他使用模式，阻碍当前的配置工作。
     </p>
     <b>以下为中文操作视频</b>
     <div class="video-wrapper">
@@ -28,5 +38,9 @@ parent: app(HDM)
         <iframe src="//player.bilibili.com/player.html?aid=636965905&bvid=BV1qb4y1x7AP&cid=541172847&page=1" 
         scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"> </iframe>
     </div>
-    <p>you can also click <a href="https://www.bilibili.com/video/BV1qb4y1x7AP?share_source=copy_web">here</a> to watch this video on bilibili</p>
+    <p>you can also click <a href="https://www.bilibili.com/video/BV1qb4y1x7AP?share_source=copy_web">here</a>
+        to watch this video on bilibili</p>
 </body>
+</html>
+
+
