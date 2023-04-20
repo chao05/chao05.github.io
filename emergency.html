@@ -4,4 +4,30 @@ title: 紧急开锁/emergency
 permalink: /emergency
 has_children: true
 ---
-<h2>{{ page.title }}</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emergency</title>
+</head>
+<body>
+    <h2 id="pageTitle">{{ page.title }}</h2>
+    <p>Dialock家具锁产品支持在非正常状况（卡片丢失，停电等）下开锁。</p>
+    <details>
+        <summary>用户卡丢了怎么办？</summary>
+        <ul>
+            <li><a href="{{site.baseurl}}/assets/emergency/aux-in.html">可以使用按钮临时开锁</a></li>
+            <li><a href="{{site.baseurl}}/assets/emergency/test-unit.html">可以拨动测试器开关开锁</a></li>
+        </ul>
+    </details>
+    <details>
+        <summary>店里停电了怎么办？</summary>
+        <ul>
+            <li><a href="{{site.baseurl}}/assets/emergency/external-power.html">可以接入“充电宝”临时供电</a></li>
+            <li><a href="{{site.baseurl}}/assets/emergency/test-unit.html">可以拨动测试器开关开锁</a></li>
+        </ul>
+    </details>
+</body>
+</html>
