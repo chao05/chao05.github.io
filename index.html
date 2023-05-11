@@ -15,5 +15,16 @@ layout: home
 <body>
     <h2>海福乐(Hafele)中国子公司</h2>
     <h3>电子锁产品</h3>
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
 </body>
 </html>
