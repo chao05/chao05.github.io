@@ -8,7 +8,7 @@ media_folder: "/images/uploads" # Media files will be stored in the repo under i
 collections:
   - name: add-on
     label: add-on
-    files: "/images/uploads"
+    folder: "/images/uploads"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
