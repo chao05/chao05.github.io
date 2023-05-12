@@ -1,5 +1,4 @@
 backend:
-  repo: https://github.com/chao05/chao05.github.io
   name: git-gateway
   branch: gh-pages # Branch to update (optional; defaults to master)
 
