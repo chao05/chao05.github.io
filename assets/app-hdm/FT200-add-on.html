@@ -153,7 +153,7 @@ parent: app(HDM)
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 843.dlkAddon">001/843 844 845(报警/T)</a></li>
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 840.dlkAddon">001/840 841 842(报警/T)</a></li>
     {% for addon in site.data.addons %}
-        <li><a class="{{addon.class_code}} " download href="{{addon.relative_url}} ">{{addon.name}} </a></li>
+        <li class="{{addon.class_code}} "><a download href="{{addon.relative_url}} ">{{addon.name}} </a></li>
     {% endfor %}
     </ul>
 
