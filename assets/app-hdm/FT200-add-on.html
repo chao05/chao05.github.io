@@ -3,10 +3,6 @@ title: FT200功能扩展/add-on
 layout: page
 parent: app(HDM)
 ---
-
-```
-
-```<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +28,8 @@ parent: app(HDM)
             <figcaption>读头侧</figcaption>
         </figure>
     </div>
-    <input type="text" name="serialNumber" id="serialNumber" placeholder="请在此输入蓝牙卡片序列号（后三位）" onfocus="this.value=''"> 
+    <input type="text" name="serialNumber" id="serialNumber" placeholder="请在此输入蓝牙卡片序列号（后三位）" onfocus="this.value=''">
+
     <ul id="responsive_list">
         <li><a download href="/assets/app-hdm/add-on/FT200/AlrmPrem_AKC169-171_FT200.Signed.dlkAddon">169-171</a></li>
         <li><a download href="/assets/app-hdm/add-on/FT200/AlrmPrem_AKC175-177_FT200.Signed.dlkAddon.dlkAddon">175-177</a></li>
@@ -66,7 +63,7 @@ parent: app(HDM)
         <li><a download href="\assets\app-hdm\add-on\FT200\DM22005-AlrmPrem FT200.Signed.FT200.000 700.dlkAddon">700-702</a></li>
         <li><a download href="\assets\app-hdm\add-on\FT200\DM22005-AlrmPrem FT200.Signed.FT200.000 703.dlkAddon">703-705</a></li>
         <li><a class="dm22009" download href="\assets\app-hdm\add-on\FT200\DM22009-DualAnt_12-34.Signed.FT200.000 703.dlkAddon">703-705(报警+'2|2')</a></li>
-
+      
         <li><a download href="\assets\app-hdm\add-on\FT200\DM22005-AlrmPrem FT200.Signed.FT200.000 706.dlkAddon">706-708</a></li>
         <li><a download href="\assets\app-hdm\add-on\FT200\DM22005-AlrmPrem FT200.Signed.FT200.000 679.dlkAddon">679-681</a></li>
         <li><a download href="\assets\app-hdm\add-on\FT200\DM22005-AlrmPrem FT200.Signed.FT200.000 685.dlkAddon">685-687</a></li>
@@ -155,8 +152,11 @@ parent: app(HDM)
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 846.dlkAddon">001/846 847 848(报警/T)</a></li>
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 843.dlkAddon">001/843 844 845(报警/T)</a></li>
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 840.dlkAddon">001/840 841 842(报警/T)</a></li>
-        <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 789.dlkAddon">001/789 790 791(报警/T)</a></li>
-
+    {% for addon in site.data.addons %}
+        <li><a class="{{addon.class_code}} " download href="{{addon.relative_url}} ">{{addon.name}} </a></li>
+    {% endfor %}
     </ul>
+
+
 </body>
 </html>
