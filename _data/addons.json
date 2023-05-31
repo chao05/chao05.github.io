@@ -26,6 +26,13 @@
         "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.001 783.dlkAddon",
         "class_code": "dm22030",
         "sales_email": "guodong.huang@hafele.com.cn"
+    },
+    {
+        "id": "5",
+        "name": "001/837 838 839(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.001 837.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "guodong.huang@hafele.com.cn"
     }
 
 ]
