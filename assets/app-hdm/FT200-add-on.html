@@ -160,6 +160,9 @@ parent: app(HDM)
     {% for addon in site.data.addons %}
         <li class="{{addon.class_code}} "><a download href="{{addon.relative_url}} ">{{addon.name}} </a></li>
     {% endfor %}
+    {% for license in site.data.licenses %}
+        <li><a download href="{{license.relative_url}} ">{{license.name}} </a></li>
+    {% endfor %}
     </ul>
 
 
