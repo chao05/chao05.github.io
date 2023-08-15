@@ -181,6 +181,22 @@
         "class_code": "dm22030",
         "sales_email": "guodong.huang@hafele.com.cn",
         "customer_email": "WangYao@kingwood.com.hk"
+    },
+    {
+        "id": "25",
+        "name": "002/193 194 195(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.002 193.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "guangfengawa.lai@hafele.com.cn",
+        "customer_email": "xiu@5-angle.com"
+    },
+    {
+        "id": "26",
+        "name": "002/472 473 474(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.002 472.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "guangfengawa.lai@hafele.com.cn",
+        "customer_email": "971236914@qq.com"
     }
 ]
 
