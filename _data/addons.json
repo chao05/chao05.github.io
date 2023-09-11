@@ -269,6 +269,22 @@
         "class_code": "dm22030",
         "sales_email": "geng.tang@hafele.com.cn",
         "customer_email": "qiujin200@126.com"
+    },
+    {
+        "id": "36",
+        "name": "002/445 446 447(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.002 445.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "shan.gao@hafele.com.cn",
+        "customer_email": "kaibojeremy.lu@hafele.com.cn"
+    },
+    {
+        "id": "37",
+        "name": "002/466 467 468(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.002 466.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "shan.gao@hafele.com.cn",
+        "customer_email": "jiaqiang.yang@hafele.com.cn"
     }
 ]
 
