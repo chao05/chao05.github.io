@@ -509,7 +509,13 @@
         "class_code": "dm22030",
         "sales_email": "",
         "customer_email": "purchasing.three@diaminter.cn"
+    },
+    {
+        "id": "66",
+        "name": "002/733 734 735(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.002 733.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "",
+        "customer_email": ""
     }
 ]
-
-
