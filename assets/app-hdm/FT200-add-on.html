@@ -157,14 +157,15 @@ parent: app(HDM)
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 846.dlkAddon">001/846 847 848(A/T)</a></li>
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 843.dlkAddon">001/843 844 845(A/T)</a></li>
         <li><a class="dm22030" download href="\assets\app-hdm\add-on\FT200\DM22030-DualAnt_12-34.Signed.FT200.001 840.dlkAddon">001/840 841 842(A/T)</a></li>
-    {% for addon in site.data.addons %}
-        <li class="{{addon.class_code}} "><a download href="{{addon.relative_url}} ">{{addon.name}} </a></li>
-    {% endfor %}
-    {% for license in site.data.licenses %}
-        <li><a download href="{{license.relative_url}} ">{{license.name}} </a></li>
-    {% endfor %}
+        {% for addon in site.data.addons %}
+            <li class="{{addon.class_code}} "><a download href="{{addon.relative_url}} ">{{addon.name}} </a></li>
+        {% endfor %}
+        {% for license in site.data.licenses %}
+            <li><a download href="{{license.relative_url}} ">{{license.name}} </a></li>
+        {% endfor %}
+        {% for addon in site.data.contentful.spaces.addons.addon %}
+        <li><a>{{ addon.file-name }}</a></li>
+        {% endfor %}
     </ul>
-
-
 </body>
 </html>

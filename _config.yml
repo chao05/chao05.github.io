@@ -55,3 +55,9 @@ plugins:
 #   - vendor/ruby/
 logo: '/images/hafele-logo.jpg'
 google_analytics: G-MHS58PVCML
+
+contentful:
+  spaces:
+    - addons:
+        space: e3d64fjiqat7
+        access_token: CFPAT-p7KzaNHUNc8p5CJVYgCeBq9p4T2FMPoBzyaexV7gqLs
