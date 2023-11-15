@@ -1,0 +1,17 @@
+---
+addon:
+- sys:
+    id: 7GdZmMPLtSKS8bH4QDJREx
+    created_at: !ruby/object:DateTime 2023-11-10 08:46:05.440000000 Z
+    updated_at: !ruby/object:DateTime 2023-11-14 06:00:25.422000000 Z
+    content_type_id: addon
+    revision: 2
+  file_name: contentful
+  file:
+    sys:
+      id: 3ZyIs26uy7oiAt6aUjloTC
+      created_at: !ruby/object:DateTime 2023-11-10 08:43:16.939000000 Z
+      updated_at: !ruby/object:DateTime 2023-11-10 08:43:16.939000000 Z
+    title: DM22030-DualAnt_12-34.Signed.FT200.002 016
+    description: ''
+    url: "//assets.ctfassets.net/e3d64fjiqat7/3ZyIs26uy7oiAt6aUjloTC/c4e2d2e9a3c1615c188182b11e820362/DM22030-DualAnt_12-34.Signed.FT200.002_016.dlkAddon"

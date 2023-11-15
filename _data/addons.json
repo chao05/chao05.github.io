@@ -517,5 +517,13 @@
         "class_code": "dm22030",
         "sales_email": "",
         "customer_email": ""
+    },
+    {
+        "id": "67",
+        "name": "002/730 731 732(A/T)",
+        "relative_url": "/assets/app-hdm/add-on/FT200/DM22030-DualAnt_12-34.Signed.FT200.002 730.dlkAddon",
+        "class_code": "dm22030",
+        "sales_email": "",
+        "customer_email": "wangyao@kingwood.com.hk"
     }
 ]
