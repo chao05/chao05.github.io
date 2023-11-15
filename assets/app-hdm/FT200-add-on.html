@@ -163,7 +163,9 @@ parent: app(HDM)
         {% for license in site.data.licenses %}
             <li><a download href="{{license.relative_url}} ">{{license.name}} </a></li>
         {% endfor %}
-        
+        {% for addon in site.data.contentful.spaces.addons.addon %}
+            <li><a download href="{{ addon.file.url | url }}">{{ addon.file_name }}</a></li>
+        {% endfor %}
     </ul>
 </body>
 </html>
