@@ -54,11 +54,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 logo: '/images/hafele-logo.jpg'
-google_analytics: GOOGLE_ANALYTICS_TOKEN
+google_analytics: G-MHS58PVCML
 
 contentful:
   spaces:
     - addons:
-        space: ADDONS_SPACE_ID
-        access_token: ADDONS_ACCESS_TOKEN
+        space: e3d64fjiqat7
+        access_token: pVu7ndmX4xuYCmBEKKI8RqOHPTsOF31ytAwHlBmf0fI
                       
