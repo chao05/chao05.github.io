@@ -3,22 +3,22 @@
         "id": "1",
         "name": "002/442 443 444(L)",
         "relative_url": "/licenses/ACCESS_44500190_002442.hdm",
-        "sales_email": "guodong.huang@hafele.com.cn",
-        "customer_email": "WangYao@kingwood.com.hk"
+        "sales_email": "",
+        "customer_email": ""
     },
     {
         "id": "2",
         "name": "002/223 224 225(L)",
         "relative_url": "/licenses/ACCESS_44500204_002223.hdm",
-        "sales_email": "chengalex.peng@hafele.com.cn",
-        "customer_email": "dgpurch@decca.com.cn"
+        "sales_email": "",
+        "customer_email": ""
     },
     {
         "id": "3",
         "name": "002/496 497 498(L)",
         "relative_url": "/licenses/ACCESS_44500210_002496.hdm",
-        "sales_email": "chengalex.peng@hafele.com.cn",
-        "customer_email": "dgpurch@decca.com.cn"
+        "sales_email": "",
+        "customer_email": ""
     }
 ]
 
