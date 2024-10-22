@@ -23,7 +23,7 @@ email: chao.ye@hafele.com.cn
 description: >- # this means to ignore newlines until "baseurl:"
                   该网站展示了海福乐(Hafele)中国子公司(HPC)电子锁产品。旨在为客户提供一个方便快捷的渠道了解产品，下载资料，观看视频等。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dialock-hafele.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://chao05.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
