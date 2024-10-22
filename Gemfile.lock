@@ -339,6 +339,7 @@ DEPENDENCIES
   jekyll-admin
   jekyll-contentful-data-import
   jekyll-feed (~> 0.15.1)
+  jekyll-redirect-from
   just-the-docs (= 0.3.3)
   minima (~> 2.5.1)
   sprockets (~> 3.7)
