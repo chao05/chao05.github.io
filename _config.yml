@@ -33,7 +33,7 @@ remote_theme: pmarsceill/just-the-docs@v0.3.3
 plugins:
   - jekyll-feed
   - jekyll-admin
-
+  - jekyll-redirect-from
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
